@@ -1,88 +1,112 @@
-// ============ AVATAR VOCAL 3D – Les Jardiniers ============
+// ============ AVATAR LÉA – Les Jardiniers ============
 
-const AVATAR_RESPONSES = {
+const RESPONSES = {
   fr: {
-    greet: "Bonjour ! Je suis Léa, votre guide 🌿\nComment puis-je vous aider aujourd'hui ?",
-    services: "Nous proposons :\n• Entretien régulier\n• Création sur mesure\n• Taille & élagage\n• Plantation & aménagement\n• Arrosage & irrigation\n\nVous voulez en savoir plus sur un service ?",
-    contact: "Contactez-nous :\n📞 Rémi : 06 90 48 39 34\n📞 Jonathan : 06 90 49 29 83\n📧 les.jardiniers@outlook.com\n\nOu remplissez le formulaire de devis sur cette page !",
-    gallery: "Notre galerie présente quelques-unes de nos réalisations à Saint-Barth 📸\nFaites défiler la page pour les découvrir !",
-    price: "Nous établissons des devis personnalisés selon la surface, le type de travaux et la fréquence. Contactez-nous pour un devis gratuit !",
-    zone: "Nous intervenons sur toute l'île de Saint-Barthélemy 🌴",
-    hours: "Nous sommes disponibles du lundi au samedi, de 7h à 17h.",
-    about: "Les Jardiniers, c'est une équipe de 6 passionnés avec plus de 15 ans d'expérience à Saint-Barth. Nous créons et entretenons des jardins d'exception.",
-    thanks: "Avec plaisir ! N'hésitez pas si vous avez d'autres questions 🌿",
-    hello: "Bonjour ! Ravi de vous retrouver. En quoi puis-je vous aider ?",
-    default: "Je ne suis pas sûre de comprendre 😊\nVoici ce que je peux vous dire :",
+    greet:     "Bonjour, je suis Léa 🌿\nJe suis votre guide sur ce site. Je peux vous présenter l'équipe, nos services, vous montrer la galerie ou vous mettre en contact. Que souhaitez-vous ?",
+    team:      "Notre équipe c'est 6 passionnés 💚\n• Rémi – Co-fondateur & chef de projet\n• Jonathan – Co-fondateur & expert terrain\n• 4 experts : paysagiste, maître jardinier, irrigation, plantation\n\nVoulez-vous voir leur présentation complète ?",
+    remi:      "Rémi est co-fondateur des Jardiniers 🌿\nVisionnaire et chef de projet, il orchestre chaque réalisation depuis plus de 15 ans sur l'île.\n📞 06 90 48 39 34",
+    jonathan:  "Jonathan est co-fondateur et expert terrain 🌿\nIl transforme chaque espace en jardin d'exception à Saint-Barth.\n📞 06 90 49 29 83",
+    services:  "Nos 6 expertises :\n01 · Entretien régulier\n02 · Création sur mesure\n03 · Taille & élagage\n04 · Plantation & aménagement\n05 · Arrosage & irrigation\n06 · Évacuation des déchets verts\n\nJe vous montre ?",
+    gallery:   "Notre galerie présente des réalisations à Saint-Barth 📸\nJardins tropicaux, allées, villas, pergolas, terrasses...\nJe vous y emmène ?",
+    contact:   "Contactez-nous directement :\n📞 Rémi : 06 90 48 39 34\n📞 Jonathan : 06 90 49 29 83\n📧 les.jardiniers@outlook.com\n📍 Saint-Barthélemy (97133)\n🕐 Lun–Sam : 7h–17h\n\nOu remplissez notre formulaire pour un devis gratuit !",
+    price:     "Nous établissons des devis personnalisés selon la surface, le type de travaux et la fréquence.\nContactez Rémi ou Jonathan pour un devis gratuit et sans engagement 😊",
+    zone:      "Nous intervenons sur toute l'île de Saint-Barthélemy 🌴\nNous connaissons parfaitement le microclimat et la végétation de chaque quartier.",
+    hours:     "Nous sommes disponibles :\n🕐 Lundi au Samedi\n⏰ 7h00 – 17h00\n\nHors ces horaires, laissez-nous un message et nous vous rappelons rapidement !",
+    about:     "Les Jardiniers, c'est une passion de l'île et de la nature 🌿\n6 experts · +15 ans d'expérience · +500 jardins réalisés à Saint-Barth.\nFondés par Rémi et Jonathan, nous créons des jardins d'exception.",
+    instagram: "Retrouvez nos réalisations sur Instagram 📸\n@les_jardiniers_st_barth\n\nDes photos au quotidien de nos jardins à Saint-Barth !",
+    email:     "Notre adresse email :\n📧 les.jardiniers@outlook.com\n\nNous répondons sous 24h !",
+    thanks:    "Avec plaisir ! Je reste disponible si vous avez d'autres questions 🌿",
+    hello:     "Bonjour ! Ravi de vous retrouver. Comment puis-je vous aider ?",
+    default:   "Je peux vous renseigner sur :\n• L'équipe\n• Nos services\n• La galerie\n• Les tarifs & devis\n• Nous contacter\n\nQue souhaitez-vous savoir ?",
   },
   en: {
-    greet: "Hello! I'm Lea, your guide 🌿\nHow can I help you today?",
-    services: "We offer:\n• Regular maintenance\n• Custom garden design\n• Pruning & trimming\n• Planting & landscaping\n• Watering & irrigation\n\nWould you like more info on a specific service?",
-    contact: "You can reach us at:\n📞 Rémi: 06 90 48 39 34\n📞 Jonathan: 06 90 49 29 83\n📧 les.jardiniers@outlook.com\n\nOr fill out our quote form on this page!",
-    gallery: "Our gallery showcases some of our garden projects in Saint-Barth 📸\nScroll down to discover them!",
-    price: "We provide personalized quotes based on surface area, type of work, and frequency. Contact us for a free estimate!",
-    zone: "We work across the entire island of Saint-Barthélemy 🌴",
-    hours: "We are available Monday to Saturday, 7am to 5pm.",
-    about: "Les Jardiniers is a team of 6 passionate professionals with over 15 years of experience in Saint-Barth. We create and maintain exceptional gardens.",
-    thanks: "You're welcome! Feel free to ask if you have more questions 🌿",
-    hello: "Hello again! How can I help you?",
-    default: "I'm not sure I understand 😊\nHere's what I can tell you:",
+    greet:     "Hello, I'm Léa 🌿\nI'm your guide on this site. I can introduce the team, our services, show you the gallery or connect you with us. What would you like?",
+    team:      "Our team is 6 passionate professionals 💚\n• Rémi – Co-founder & project manager\n• Jonathan – Co-founder & field expert\n• 4 experts: landscape, master gardener, irrigation, planting\n\nWould you like to see the full team?",
+    remi:      "Rémi is co-founder of Les Jardiniers 🌿\nA visionary project manager with over 15 years on the island.\n📞 06 90 48 39 34",
+    jonathan:  "Jonathan is co-founder and field expert 🌿\nHe transforms every space into an exceptional garden in Saint-Barth.\n📞 06 90 49 29 83",
+    services:  "Our 6 areas of expertise:\n01 · Regular maintenance\n02 · Custom garden design\n03 · Pruning & trimming\n04 · Planting & landscaping\n05 · Watering & irrigation\n06 · Green waste removal\n\nShall I show you?",
+    gallery:   "Our gallery features our work across Saint-Barth 📸\nTropical gardens, walkways, villas, pergolas, terraces...\nWant me to take you there?",
+    contact:   "Reach us directly:\n📞 Rémi: 06 90 48 39 34\n📞 Jonathan: 06 90 49 29 83\n📧 les.jardiniers@outlook.com\n📍 Saint-Barthélemy (97133)\n🕐 Mon–Sat: 7am–5pm\n\nOr fill in our form for a free quote!",
+    price:     "We provide personalised quotes based on surface area, type of work and frequency.\nContact Rémi or Jonathan for a free, no-obligation quote 😊",
+    zone:      "We work across the entire island of Saint-Barthélemy 🌴\nWe know the microclimate and vegetation of every neighbourhood perfectly.",
+    hours:     "We are available:\n🕐 Monday to Saturday\n⏰ 7am – 5pm\n\nOutside these hours, leave us a message and we'll call you back quickly!",
+    about:     "Les Jardiniers is a passion for the island and nature 🌿\n6 experts · 15+ years experience · 500+ gardens in Saint-Barth.\nFounded by Rémi and Jonathan, we create exceptional gardens.",
+    instagram: "Find our work on Instagram 📸\n@les_jardiniers_st_barth\n\nDaily photos of our gardens in Saint-Barth!",
+    email:     "Our email address:\n📧 les.jardiniers@outlook.com\n\nWe reply within 24 hours!",
+    thanks:    "You're welcome! I'm here if you have more questions 🌿",
+    hello:     "Hello again! How can I help you?",
+    default:   "I can tell you about:\n• The team\n• Our services\n• The gallery\n• Pricing & quotes\n• How to contact us\n\nWhat would you like to know?",
   }
 };
 
-const AVATAR_SUGGESTIONS = {
-  fr: ['Nos services', 'Nous contacter', 'Voir la galerie', 'Tarifs & devis', 'Zone d\'intervention', 'Horaires'],
-  en: ['Our services', 'Contact us', 'See gallery', 'Pricing & quotes', 'Service area', 'Opening hours']
+const SUGGESTIONS = {
+  fr: ['L\'équipe', 'Nos services', 'La galerie', 'Tarifs & devis', 'Nous contacter', 'Horaires'],
+  en: ['The team', 'Our services', 'The gallery', 'Pricing', 'Contact us', 'Opening hours']
 };
 
-const AVATAR_KEYWORDS = {
+const KEYWORDS = {
   fr: {
-    services: ['service', 'prestation', 'travaux', 'taille', 'entretien', 'création', 'plantation', 'arrosage', 'élagage'],
-    contact: ['contact', 'téléphone', 'appel', 'email', 'mail', 'joindre', 'rémi', 'jonathan'],
-    gallery: ['galerie', 'photo', 'réalisation', 'exemple', 'voir'],
-    price: ['prix', 'tarif', 'devis', 'coût', 'combien'],
-    zone: ['zone', 'secteur', 'intervention', 'île', 'barth', 'où'],
-    hours: ['horaire', 'heure', 'ouvert', 'disponible', 'quand'],
-    about: ['qui', 'entreprise', 'équipe', 'expérience', 'présentation', 'propos'],
-    thanks: ['merci', 'super', 'parfait', 'génial', 'nickel'],
-    hello: ['bonjour', 'salut', 'hello', 'bonsoir', 'coucou'],
+    team:      ['équipe', 'membre', 'collaborateur', 'présentation', 'qui travaille'],
+    remi:      ['rémi', 'remi', 'fondateur'],
+    jonathan:  ['jonathan'],
+    services:  ['service', 'prestation', 'taille', 'entretien', 'création', 'plantation', 'arrosage', 'élagage', 'déchet', 'travaux'],
+    gallery:   ['galerie', 'photo', 'réalisation', 'exemple', 'travaux', 'portfolio'],
+    contact:   ['contact', 'téléphone', 'appeler', 'email', 'mail', 'joindre', 'numéro', 'coordonnée'],
+    price:     ['prix', 'tarif', 'devis', 'coût', 'combien', 'gratuit'],
+    zone:      ['zone', 'secteur', 'intervention', 'île', 'barth', 'où', 'quartier'],
+    hours:     ['horaire', 'heure', 'ouvert', 'disponible', 'quand', 'matin'],
+    about:     ['qui', 'entreprise', 'expérience', 'propos', 'histoire', 'depuis'],
+    instagram: ['instagram', 'insta', 'réseau', 'social'],
+    email:     ['email', 'mail', 'courrier', 'outlook'],
+    thanks:    ['merci', 'super', 'parfait', 'génial', 'nickel', 'top', 'cool'],
+    hello:     ['bonjour', 'salut', 'hello', 'bonsoir', 'coucou', 'hey'],
   },
   en: {
-    services: ['service', 'work', 'pruning', 'maintenance', 'creation', 'planting', 'watering', 'trimming'],
-    contact: ['contact', 'phone', 'call', 'email', 'reach', 'remi', 'jonathan'],
-    gallery: ['gallery', 'photo', 'picture', 'project', 'see'],
-    price: ['price', 'cost', 'quote', 'estimate', 'how much'],
-    zone: ['zone', 'area', 'island', 'barth', 'where'],
-    hours: ['hours', 'schedule', 'open', 'available', 'when'],
-    about: ['who', 'company', 'team', 'experience', 'about'],
-    thanks: ['thank', 'thanks', 'great', 'perfect', 'awesome'],
-    hello: ['hello', 'hi', 'hey', 'good morning', 'bonjour'],
+    team:      ['team', 'member', 'staff', 'who', 'meet', 'people'],
+    remi:      ['remi', 'rémi'],
+    jonathan:  ['jonathan'],
+    services:  ['service', 'work', 'pruning', 'maintenance', 'creation', 'planting', 'watering', 'trimming', 'waste'],
+    gallery:   ['gallery', 'photo', 'picture', 'project', 'portfolio', 'work', 'example'],
+    contact:   ['contact', 'phone', 'call', 'email', 'reach', 'number'],
+    price:     ['price', 'cost', 'quote', 'estimate', 'how much', 'fee'],
+    zone:      ['zone', 'area', 'island', 'barth', 'where', 'location'],
+    hours:     ['hours', 'schedule', 'open', 'available', 'when', 'time'],
+    about:     ['company', 'experience', 'about', 'history', 'since', 'story'],
+    instagram: ['instagram', 'insta', 'social', 'network'],
+    email:     ['email', 'mail', 'outlook'],
+    thanks:    ['thank', 'thanks', 'great', 'perfect', 'awesome', 'nice', 'good'],
+    hello:     ['hello', 'hi', 'hey', 'good morning', 'bonjour'],
   }
 };
 
-const AVATAR_SCROLL_TARGETS = {
-  'Nos services': '#services',
-  'Voir la galerie': '#galerie',
-  'Nous contacter': '#contact',
-  'Our services': '#services',
-  'See gallery': '#galerie',
-  'Contact us': '#contact',
+// Section anchors for navigation
+const NAV_TARGETS = {
+  fr: {
+    team:     document.documentElement.lang === 'en' ? '#team' : '#equipe',
+    services: '#services',
+    gallery:  document.documentElement.lang === 'en' ? '#gallery' : '#galerie',
+    contact:  '#contact',
+  },
+  en: {
+    team:     '#team',
+    services: '#services',
+    gallery:  '#gallery',
+    contact:  '#contact',
+  }
 };
 
-const AVATAR_SUGGESTION_MAP = {
-  'Nos services': 'services',
-  'Our services': 'services',
-  'Nous contacter': 'contact',
-  'Contact us': 'contact',
-  'Voir la galerie': 'gallery',
-  'See gallery': 'gallery',
-  'Tarifs & devis': 'price',
-  'Pricing & quotes': 'price',
-  "Zone d'intervention": 'zone',
-  'Service area': 'zone',
-  'Horaires': 'hours',
-  'Opening hours': 'hours',
+const SUGGESTION_INTENT = {
+  'L\'équipe': 'team', 'The team': 'team',
+  'Nos services': 'services', 'Our services': 'services',
+  'La galerie': 'gallery', 'The gallery': 'gallery',
+  'Tarifs & devis': 'price', 'Pricing': 'price',
+  'Nous contacter': 'contact', 'Contact us': 'contact',
+  'Horaires': 'hours', 'Opening hours': 'hours',
 };
 
+const SCROLL_ON = new Set(['team', 'services', 'gallery', 'contact']);
+
+// ---- State ----
 let avatarOpen = false;
 let avatarGreeted = false;
 let recognition = null;
@@ -90,7 +114,7 @@ let isListening = false;
 let isSpeaking = false;
 let typingEl = null;
 
-function getAvatarLang() {
+function getLang() {
   return document.documentElement.lang === 'en' ? 'en' : 'fr';
 }
 
@@ -98,16 +122,18 @@ function getAvatarLang() {
 function speak(text) {
   if (!window.speechSynthesis) return;
   window.speechSynthesis.cancel();
-  const l = getAvatarLang();
-  const utter = new SpeechSynthesisUtterance(text.replace(/[📞📧📸🌿🌴😊]/g, ''));
+  const l = getLang();
+  const clean = text.replace(/[📞📧📸🌿🌴😊💚🕐⏰📍·•]/g, '').replace(/\d{2} \d{2} \d{2} \d{2} \d{2}/g, m => m.split(' ').join(' '));
+  const utter = new SpeechSynthesisUtterance(clean);
   utter.lang = l === 'fr' ? 'fr-FR' : 'en-US';
-  utter.rate = 0.95;
-  utter.pitch = 1.1;
+  utter.rate = 0.92;
+  utter.pitch = 1.15;
+  utter.volume = 1;
 
   const voices = window.speechSynthesis.getVoices();
   const preferred = l === 'fr'
-    ? ['Amélie', 'Marie', 'Audrey', 'Google français', 'fr-FR']
-    : ['Samantha', 'Ava', 'Karen', 'Google US English', 'en-US'];
+    ? ['Amélie', 'Marie', 'Audrey', 'Juliette', 'Google français', 'fr-FR']
+    : ['Samantha', 'Ava', 'Karen', 'Victoria', 'Google US English', 'en-US'];
   let voice = null;
   for (const name of preferred) {
     voice = voices.find(v => v.name.includes(name) || v.lang === name);
@@ -121,12 +147,12 @@ function speak(text) {
   utter.onstart = () => {
     isSpeaking = true;
     if (mouth) mouth.classList.add('talking');
-    setAvatarStatus(l === 'fr' ? 'Je parle...' : 'Speaking...');
+    setStatus(l === 'fr' ? 'Je parle...' : 'Speaking...');
   };
   utter.onend = () => {
     isSpeaking = false;
     if (mouth) mouth.classList.remove('talking');
-    setAvatarStatus(l === 'fr' ? 'Votre guide' : 'Your guide');
+    setStatus(l === 'fr' ? 'Votre guide' : 'Your guide');
   };
   window.speechSynthesis.speak(utter);
 }
@@ -138,20 +164,18 @@ function setupRecognition() {
   const r = new SR();
   r.continuous = false;
   r.interimResults = false;
-  r.lang = getAvatarLang() === 'fr' ? 'fr-FR' : 'en-US';
+  r.lang = getLang() === 'fr' ? 'fr-FR' : 'en-US';
   r.onstart = () => {
     isListening = true;
-    const btn = document.getElementById('mic-btn');
-    if (btn) btn.classList.add('listening');
-    const l = getAvatarLang();
-    setAvatarStatus(l === 'fr' ? 'J\'écoute...' : 'Listening...');
+    document.getElementById('mic-btn')?.classList.add('listening');
+    setStatus(getLang() === 'fr' ? 'J\'écoute...' : 'Listening...');
   };
   r.onresult = e => {
     const text = e.results[0][0].transcript;
     const input = document.getElementById('avatar-input');
     if (input) input.value = text;
     stopListening();
-    handleAvatarText(text);
+    handleText(text);
   };
   r.onerror = () => stopListening();
   r.onend = () => stopListening();
@@ -161,8 +185,8 @@ function setupRecognition() {
 function startListening() {
   if (!recognition) recognition = setupRecognition();
   if (!recognition) {
-    const l = getAvatarLang();
-    addAvatarMessage(l === 'fr' ? "Désolée, la reconnaissance vocale n'est pas disponible dans ce navigateur." : "Sorry, voice recognition is not available in this browser.", 'bot');
+    const l = getLang();
+    addMsg(l === 'fr' ? "Désolée, la reconnaissance vocale n'est pas disponible ici." : "Sorry, voice recognition is not available here.", 'bot');
     return;
   }
   if (isListening) { stopListening(); return; }
@@ -171,20 +195,18 @@ function startListening() {
 
 function stopListening() {
   isListening = false;
-  const btn = document.getElementById('mic-btn');
-  if (btn) btn.classList.remove('listening');
-  const l = getAvatarLang();
-  setAvatarStatus(l === 'fr' ? 'Votre guide' : 'Your guide');
-  try { if (recognition) recognition.stop(); } catch(e) {}
+  document.getElementById('mic-btn')?.classList.remove('listening');
+  setStatus(getLang() === 'fr' ? 'Votre guide' : 'Your guide');
+  try { recognition?.stop(); } catch(e) {}
 }
 
-// ---- UI helpers ----
-function setAvatarStatus(txt) {
+// ---- UI ----
+function setStatus(txt) {
   const el = document.getElementById('avatarStatus');
   if (el) el.textContent = txt;
 }
 
-function addAvatarMessage(text, type) {
+function addMsg(text, type) {
   const msgs = document.getElementById('avatar-messages');
   if (!msgs) return;
   if (typingEl) { typingEl.remove(); typingEl = null; }
@@ -205,129 +227,167 @@ function showTyping() {
   msgs.scrollTop = msgs.scrollHeight;
 }
 
-function hideTyping() {
-  if (typingEl) { typingEl.remove(); typingEl = null; }
-}
-
-function updateAvatarSuggestions() {
-  const l = getAvatarLang();
+function renderSuggestions() {
+  const l = getLang();
   const container = document.getElementById('avatar-suggestions');
   if (!container) return;
   container.innerHTML = '';
-  AVATAR_SUGGESTIONS[l].forEach(s => {
+  SUGGESTIONS[l].forEach(s => {
     const btn = document.createElement('button');
     btn.className = 'sug-btn';
     btn.innerText = s;
-    btn.onclick = () => handleAvatarSuggestion(s);
+    btn.onclick = () => handleSuggestion(s);
     container.appendChild(btn);
   });
 }
 
-// ---- Intent ----
-function detectAvatarIntent(text) {
-  const l = getAvatarLang();
+function scrollToSection(intent) {
+  const l = getLang();
+  const sectionMap = {
+    team:     l === 'fr' ? '#equipe' : '#team',
+    services: '#services',
+    gallery:  l === 'fr' ? '#galerie' : '#gallery',
+    contact:  '#contact',
+  };
+  const target = sectionMap[intent];
+  if (target) {
+    setTimeout(() => {
+      document.querySelector(target)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 800);
+  }
+}
+
+// ---- Intent detection ----
+function detectIntent(text) {
+  const l = getLang();
   const t = text.toLowerCase();
-  for (const [intent, words] of Object.entries(AVATAR_KEYWORDS[l])) {
+  for (const [intent, words] of Object.entries(KEYWORDS[l])) {
     if (words.some(w => t.includes(w))) return intent;
   }
   return 'default';
 }
 
-// ---- Message handling ----
-function handleAvatarText(text) {
+// ---- Handlers ----
+function handleText(text) {
   if (!text.trim()) return;
-  const l = getAvatarLang();
-  addAvatarMessage(text, 'user');
+  const l = getLang();
+  addMsg(text, 'user');
   const input = document.getElementById('avatar-input');
   if (input) input.value = '';
 
   showTyping();
-  const intent = detectAvatarIntent(text);
-  const reply = AVATAR_RESPONSES[l][intent];
+  const intent = detectIntent(text);
+  const reply = RESPONSES[l][intent] || RESPONSES[l].default;
 
   setTimeout(() => {
-    hideTyping();
-    addAvatarMessage(reply, 'bot');
+    if (typingEl) { typingEl.remove(); typingEl = null; }
+    addMsg(reply, 'bot');
     speak(reply);
-  }, 420);
+    if (SCROLL_ON.has(intent)) scrollToSection(intent);
+  }, 480);
 }
 
-function handleAvatarSuggestion(text) {
-  const l = getAvatarLang();
-  addAvatarMessage(text, 'user');
-  const intent = AVATAR_SUGGESTION_MAP[text];
-  const reply = intent ? AVATAR_RESPONSES[l][intent] : AVATAR_RESPONSES[l].default;
+function handleSuggestion(text) {
+  const l = getLang();
+  addMsg(text, 'user');
+  const intent = SUGGESTION_INTENT[text] || 'default';
+  const reply = RESPONSES[l][intent] || RESPONSES[l].default;
 
   showTyping();
   setTimeout(() => {
-    hideTyping();
-    addAvatarMessage(reply, 'bot');
+    if (typingEl) { typingEl.remove(); typingEl = null; }
+    addMsg(reply, 'bot');
     speak(reply);
-    if (AVATAR_SCROLL_TARGETS[text]) {
-      setTimeout(() => {
-        document.querySelector(AVATAR_SCROLL_TARGETS[text])?.scrollIntoView({ behavior: 'smooth' });
-      }, 700);
-    }
-  }, 420);
+    if (SCROLL_ON.has(intent)) scrollToSection(intent);
+  }, 480);
 }
 
 // ---- Open / Close ----
 function openAvatar() {
   avatarOpen = true;
-  const win = document.getElementById('avatar-window');
-  const bubble = document.getElementById('avatar-bubble');
-  if (win) win.classList.add('open');
-  if (bubble) bubble.style.display = 'none';
-  updateAvatarSuggestions();
-
+  document.getElementById('avatar-window')?.classList.add('open');
+  document.getElementById('avatar-bubble') && (document.getElementById('avatar-bubble').style.display = 'none');
+  renderSuggestions();
   if (!avatarGreeted) {
     avatarGreeted = true;
-    const l = getAvatarLang();
+    const l = getLang();
     setTimeout(() => {
-      addAvatarMessage(AVATAR_RESPONSES[l].greet, 'bot');
-      speak(AVATAR_RESPONSES[l].greet);
-    }, 250);
+      addMsg(RESPONSES[l].greet, 'bot');
+      speak(RESPONSES[l].greet);
+    }, 280);
   }
 }
 
 function closeAvatar() {
   avatarOpen = false;
-  window.speechSynthesis && window.speechSynthesis.cancel();
+  window.speechSynthesis?.cancel();
   stopListening();
-  const win = document.getElementById('avatar-window');
-  if (win) win.classList.remove('open');
+  document.getElementById('avatar-window')?.classList.remove('open');
 }
 
 // ---- Init ----
 document.addEventListener('DOMContentLoaded', () => {
-  // Welcome bubble
+  // Welcome bubble after 3.5s
   setTimeout(() => {
-    const l = getAvatarLang();
+    const l = getLang();
     const bubble = document.getElementById('avatar-bubble');
-    if (bubble) {
+    if (bubble && !avatarOpen) {
       bubble.innerText = l === 'fr'
-        ? '👋 Bonjour ! Je suis Léa\nVotre guide virtuel 🌿'
-        : '👋 Hello! I\'m Lea\nYour virtual guide 🌿';
+        ? '👋 Bonjour ! Je suis Léa\nVotre guide Les Jardiniers 🌿'
+        : '👋 Hello! I\'m Léa\nYour Les Jardiniers guide 🌿';
       bubble.style.display = 'block';
+      // Auto-hide bubble after 8s
+      setTimeout(() => { if (!avatarOpen) bubble.style.display = 'none'; }, 8000);
     }
-  }, 4000);
+  }, 3500);
 
-  // Voices may load async
+  // Preload voices
   if (window.speechSynthesis) {
-    window.speechSynthesis.onvoiceschanged = () => {};
+    window.speechSynthesis.getVoices();
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
   }
 
-  const btn = document.getElementById('avatar-btn');
-  const closeBtn = document.getElementById('avatar-close');
-  const bubble = document.getElementById('avatar-bubble');
-  const micBtn = document.getElementById('mic-btn');
-  const sendBtn = document.getElementById('avatar-send');
-  const inputEl = document.getElementById('avatar-input');
+  // Events
+  document.getElementById('avatar-btn')?.addEventListener('click', () => avatarOpen ? closeAvatar() : openAvatar());
+  document.getElementById('avatar-close')?.addEventListener('click', closeAvatar);
+  document.getElementById('avatar-bubble')?.addEventListener('click', openAvatar);
+  document.getElementById('mic-btn')?.addEventListener('click', startListening);
+  document.getElementById('avatar-send')?.addEventListener('click', () => {
+    const v = document.getElementById('avatar-input')?.value?.trim();
+    if (v) handleText(v);
+  });
+  document.getElementById('avatar-input')?.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      const v = e.target.value.trim();
+      if (v) handleText(v);
+    }
+  });
 
-  if (btn) btn.addEventListener('click', () => avatarOpen ? closeAvatar() : openAvatar());
-  if (closeBtn) closeBtn.addEventListener('click', closeAvatar);
-  if (bubble) bubble.addEventListener('click', openAvatar);
-  if (micBtn) micBtn.addEventListener('click', startListening);
-  if (sendBtn) sendBtn.addEventListener('click', () => handleAvatarText(inputEl?.value?.trim() || ''));
-  if (inputEl) inputEl.addEventListener('keydown', e => { if (e.key === 'Enter') handleAvatarText(inputEl.value.trim()); });
+  // Scroll-aware: update bubble text based on current section
+  const sections = ['equipe', 'team', 'services', 'galerie', 'gallery', 'contact'];
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting && !avatarOpen) {
+        const id = e.target.id;
+        const bubble = document.getElementById('avatar-bubble');
+        if (!bubble) return;
+        const l = getLang();
+        const hints = {
+          fr: { equipe: '💚 Vous découvrez l\'équipe !', services: '🌿 Nos 6 expertises vous attendent', galerie: '📸 Nos réalisations à Saint-Barth', contact: '📞 Un devis gratuit ? Je vous aide !' },
+          en: { team: '💚 Meet our passionate team!', services: '🌿 Discover our 6 areas of expertise', gallery: '📸 Our creations in Saint-Barth', contact: '📞 Free quote? I can help you!' },
+        };
+        const hint = (hints[l] || {})[id];
+        if (hint) {
+          bubble.innerText = hint;
+          bubble.style.display = 'block';
+          setTimeout(() => { if (!avatarOpen) bubble.style.display = 'none'; }, 5000);
+        }
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) observer.observe(el);
+  });
 });

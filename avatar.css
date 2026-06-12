@@ -1,4 +1,4 @@
-/* ============ AVATAR 3D VOCAL ============ */
+/* ============ AVATAR LÉA – Thème sombre futuriste ============ */
 
 #avatar-launcher {
   position: fixed;
@@ -11,28 +11,32 @@
   gap: 12px;
 }
 
+/* Bulle de bienvenue */
 #avatar-bubble {
-  background: #fff;
-  border: 1px solid #e0e8dd;
+  background: rgba(10,20,10,0.92);
+  border: 1px solid rgba(201,168,76,0.35);
   border-radius: 16px 16px 4px 16px;
   padding: 12px 16px;
   font-size: 0.88rem;
-  color: #2d5a27;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  color: #e8f0e8;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4), 0 0 12px rgba(201,168,76,0.1);
   max-width: 220px;
-  line-height: 1.4;
+  line-height: 1.5;
   cursor: pointer;
   animation: popIn 0.4s ease;
+  backdrop-filter: blur(12px);
+  white-space: pre-line;
 }
 
+/* Bouton launcher */
 #avatar-btn {
-  width: 68px;
-  height: 68px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  background: linear-gradient(145deg, #f5f0e8, #e8ddd0);
-  border: 3px solid #2d5a27;
+  background: radial-gradient(ellipse at 38% 38%, #f5c5a3, #d4956a 55%, #b87050);
+  border: 3px solid rgba(201,168,76,0.6);
   cursor: pointer;
-  box-shadow: 0 6px 24px rgba(45,90,39,0.3), inset 0 -2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 28px rgba(0,0,0,0.5), 0 0 18px rgba(201,168,76,0.25), inset 0 -2px 8px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,38 +44,80 @@
   position: relative;
   overflow: visible;
 }
+#avatar-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 36px rgba(0,0,0,0.5), 0 0 28px rgba(201,168,76,0.4);
+}
 
-#avatar-btn:hover { transform: scale(1.08); box-shadow: 0 8px 30px rgba(45,90,39,0.4); }
-
-/* Mini face on button */
+/* Mini visage sur le bouton */
 .avatar-face-mini {
   position: relative;
-  width: 36px;
-  height: 36px;
+  width: 38px;
+  height: 38px;
+}
+
+/* Cheveux mini */
+.avatar-face-mini::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -1px;
+  right: -1px;
+  height: 14px;
+  background: radial-gradient(ellipse, #3a1c00, #5a2e00);
+  border-radius: 50% 50% 30% 30%;
+  z-index: 0;
+}
+
+/* Boucles mini */
+.avatar-face-mini::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: -3px;
+  width: 8px;
+  height: 14px;
+  background: linear-gradient(to bottom, #3a1c00, #5a2e00);
+  border-radius: 50% 0 0 50%;
+  z-index: 0;
 }
 
 .eye-mini {
   position: absolute;
   width: 7px;
-  height: 8px;
+  height: 7px;
   background: #2d1a0e;
   border-radius: 50%;
-  top: 10px;
+  top: 13px;
+  z-index: 1;
 }
-.eye-mini.l { left: 6px; }
-.eye-mini.r { right: 6px; }
+.eye-mini.l { left: 7px; }
+.eye-mini.r { right: 7px; }
+
+/* Cils mini */
+.eye-mini::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #1a0a00;
+  border-radius: 2px 2px 0 0;
+}
 
 .mouth-mini {
   position: absolute;
-  bottom: 6px;
+  bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
   width: 14px;
   height: 6px;
-  border-bottom: 2.5px solid #b85c38;
-  border-left: 1.5px solid #b85c38;
-  border-right: 1.5px solid #b85c38;
+  border-bottom: 2.5px solid #c06050;
+  border-left: 1.5px solid #c06050;
+  border-right: 1.5px solid #c06050;
   border-radius: 0 0 8px 8px;
+  z-index: 1;
 }
 
 .avatar-badge {
@@ -80,41 +126,52 @@
   right: 0;
   width: 16px;
   height: 16px;
-  background: #e74c3c;
+  background: #c9a84c;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid #050d05;
   animation: pulse 2s infinite;
 }
 
-/* Avatar window */
+/* ---- Fenêtre de chat ---- */
 #avatar-window {
   position: fixed;
-  bottom: 110px;
+  bottom: 112px;
   right: 28px;
   width: 340px;
-  max-height: 520px;
-  background: #fff;
-  border-radius: 20px;
-  box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+  max-height: 540px;
+  background: rgba(8,16,8,0.96);
+  border: 1px solid rgba(201,168,76,0.22);
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7), 0 0 40px rgba(201,168,76,0.08);
   display: none;
   flex-direction: column;
   overflow: hidden;
   z-index: 1000;
   animation: slideUp 0.35s ease;
+  backdrop-filter: blur(20px);
 }
-
 #avatar-window.open { display: flex; }
 
-/* Header with 3D avatar */
+/* ---- Header ---- */
 .avatar-header {
-  background: linear-gradient(135deg, #1a3a15 0%, #2d5a27 60%, #4a8a3d 100%);
-  padding: 20px 18px 16px;
+  background: linear-gradient(135deg, #0a1a0a 0%, #121e10 60%, #1a2c14 100%);
+  border-bottom: 1px solid rgba(201,168,76,0.18);
+  padding: 18px 16px 14px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+}
+.avatar-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.06), transparent 60%);
+  pointer-events: none;
 }
 
-/* 3D Avatar Face */
+/* ---- Visage 3D Léa ---- */
 #avatar-3d {
   flex-shrink: 0;
   display: flex;
@@ -124,97 +181,156 @@
 }
 
 .avatar-face {
-  width: 54px;
-  height: 54px;
-  background: radial-gradient(ellipse at 35% 35%, #f5c5a3, #d4956a 60%, #c07a50);
-  border-radius: 50%;
+  width: 60px;
+  height: 62px;
+  background: radial-gradient(ellipse at 38% 35%, #fcd5b0, #e8a878 55%, #d08858);
+  border-radius: 48% 48% 42% 42%;
   position: relative;
-  box-shadow: 2px 4px 12px rgba(0,0,0,0.3), inset -3px -3px 8px rgba(0,0,0,0.15), inset 2px 2px 6px rgba(255,255,255,0.3);
-  transform: perspective(120px) rotateY(-5deg);
+  box-shadow:
+    2px 5px 14px rgba(0,0,0,0.45),
+    inset -4px -4px 10px rgba(0,0,0,0.18),
+    inset 3px 3px 8px rgba(255,220,180,0.35);
+  transform: perspective(140px) rotateY(-4deg);
 }
 
-/* Hair */
+/* Joues rosées */
 .avatar-face::before {
   content: '';
   position: absolute;
-  top: -6px;
-  left: -2px;
-  right: -2px;
-  height: 28px;
-  background: radial-gradient(ellipse, #4a2800, #6b3a00);
-  border-radius: 50% 50% 30% 30%;
+  bottom: 16px;
+  left: 4px;
+  right: 4px;
+  height: 14px;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(220,100,100,0.22), transparent 55%),
+    radial-gradient(ellipse at 80% 50%, rgba(220,100,100,0.22), transparent 55%);
   z-index: 1;
+  pointer-events: none;
 }
 
-/* Neck */
-.avatar-face::after {
+/* Cheveux longs */
+.avatar-hair {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Cheveux du dessus */
+.avatar-hair::before {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 14px;
-  background: radial-gradient(#d4956a, #c07a50);
-  border-radius: 0 0 6px 6px;
-  z-index: 0;
+  top: -10px;
+  left: -4px;
+  right: -4px;
+  height: 30px;
+  background: linear-gradient(to bottom, #2a1200, #3d1c00 70%, transparent);
+  border-radius: 50% 50% 0 0;
+  z-index: 3;
 }
 
+/* Mèches latérales */
+.avatar-hair::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: -8px;
+  width: 12px;
+  height: 40px;
+  background: linear-gradient(to bottom, #2a1200, #3d1c00 60%, transparent);
+  border-radius: 50% 0 30% 50%;
+  box-shadow: 67px 0 0 0 #2a1200;
+  z-index: 3;
+}
+
+/* Yeux */
 .avatar-eyes {
   position: absolute;
-  top: 22px;
+  top: 24px;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  z-index: 2;
+  gap: 12px;
+  z-index: 4;
 }
 
 .eye {
-  width: 10px;
-  height: 12px;
+  position: relative;
+  width: 12px;
+  height: 13px;
   background: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35);
+}
+
+/* Cils supérieurs */
+.eye::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  right: -2px;
+  height: 4px;
+  background: #1a0800;
+  border-radius: 4px 4px 0 0;
+  z-index: 5;
+}
+
+/* Ombre paupière */
+.eye::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgba(120,60,100,0.25);
+  border-radius: 0;
+  z-index: 4;
 }
 
 .pupil {
-  width: 6px;
-  height: 7px;
-  background: #2d1a0e;
+  width: 7px;
+  height: 8px;
+  background: radial-gradient(circle at 35% 35%, #5a3a70, #1a0a28);
   border-radius: 50%;
   position: relative;
   animation: blink 4s infinite;
+  z-index: 4;
 }
 
+/* Reflet */
 .pupil::after {
   content: '';
   position: absolute;
   top: 1px;
   left: 1px;
-  width: 2px;
-  height: 2px;
-  background: #fff;
+  width: 2.5px;
+  height: 2.5px;
+  background: rgba(255,255,255,0.85);
   border-radius: 50%;
 }
 
-/* Mouth */
+/* Bouche */
 .avatar-mouth {
   position: absolute;
   bottom: 13px;
   left: 50%;
   transform: translateX(-50%);
-  width: 18px;
-  height: 8px;
-  border-bottom: 2.5px solid #9e3b1a;
-  border-left: 2px solid #9e3b1a;
-  border-right: 2px solid #9e3b1a;
-  border-radius: 0 0 10px 10px;
-  z-index: 2;
+  width: 20px;
+  height: 9px;
+  border-bottom: 2.5px solid #c05848;
+  border-left: 2px solid #c05848;
+  border-right: 2px solid #c05848;
+  border-radius: 0 0 12px 12px;
+  z-index: 4;
   transition: all 0.1s;
 }
 
@@ -223,119 +339,152 @@
 }
 
 .avatar-mouth.happy {
-  border-bottom: 3px solid #c0442a;
-  height: 10px;
-  width: 22px;
+  border-color: #d06858;
+  height: 11px;
+  width: 24px;
 }
 
-/* Body */
+/* Cou */
+.avatar-neck {
+  width: 22px;
+  height: 12px;
+  background: linear-gradient(to bottom, #d08858, #c07848);
+  margin-top: -3px;
+  border-radius: 0 0 4px 4px;
+}
+
+/* Corps */
 .avatar-body {
-  width: 36px;
-  height: 20px;
-  background: linear-gradient(to bottom, #2d5a27, #4a8a3d);
+  width: 40px;
+  height: 18px;
+  background: linear-gradient(to bottom, #1a2c14, #243c1c);
   border-radius: 6px 6px 0 0;
-  margin-top: -2px;
+  margin-top: 0;
   position: relative;
+  border-top: 1px solid rgba(201,168,76,0.3);
 }
 
 .avatar-body::after {
-  content: '🌿';
+  content: '✦';
   position: absolute;
   top: 2px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 0.8rem;
+  font-size: 0.65rem;
+  color: rgba(201,168,76,0.7);
 }
 
+/* Info texte */
 .avatar-info { flex: 1; }
-.avatar-name { color: #fff; font-weight: bold; font-size: 1.1rem; letter-spacing: 0.5px; }
-.avatar-status { color: rgba(255,255,255,0.75); font-size: 0.8rem; margin-top: 2px; font-style: italic; }
+.avatar-name {
+  color: #c9a84c;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+.avatar-status {
+  color: rgba(240,244,240,0.55);
+  font-size: 0.78rem;
+  margin-top: 3px;
+  font-style: italic;
+}
 
 #avatar-close {
-  background: rgba(255,255,255,0.15);
-  border: none;
-  color: #fff;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(240,244,240,0.7);
   width: 28px;
   height: 28px;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  transition: all 0.2s;
 }
-#avatar-close:hover { background: rgba(255,255,255,0.3); }
+#avatar-close:hover { background: rgba(255,255,255,0.14); color: #fff; }
 
-/* Messages */
+/* ---- Messages ---- */
 .avatar-messages {
   flex: 1;
   overflow-y: auto;
-  padding: 14px 16px;
+  padding: 14px 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   min-height: 120px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(201,168,76,0.2) transparent;
 }
 
 .amsg {
-  max-width: 85%;
+  max-width: 86%;
   padding: 10px 14px;
   border-radius: 12px;
-  font-size: 0.87rem;
-  line-height: 1.45;
+  font-size: 0.86rem;
+  line-height: 1.5;
   animation: popIn 0.25s ease;
 }
 .amsg.bot {
-  background: #f0f5ef;
-  color: #222;
+  background: rgba(255,255,255,0.06);
+  color: #e0e8e0;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 4px 12px 12px 12px;
   align-self: flex-start;
   white-space: pre-line;
 }
 .amsg.user {
-  background: #2d5a27;
-  color: #fff;
+  background: linear-gradient(135deg, rgba(201,168,76,0.22), rgba(201,168,76,0.12));
+  color: #f0e8d0;
+  border: 1px solid rgba(201,168,76,0.28);
   border-radius: 12px 4px 12px 12px;
   align-self: flex-end;
 }
 
-/* Suggestions */
+/* ---- Suggestions ---- */
 .avatar-suggestions {
-  padding: 6px 14px 10px;
+  padding: 6px 12px 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 .sug-btn {
-  background: #f0f5ef;
-  border: 1px solid #c8dcc4;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,168,76,0.25);
   border-radius: 18px;
-  padding: 5px 11px;
-  font-size: 0.78rem;
-  color: #2d5a27;
+  padding: 5px 12px;
+  font-size: 0.77rem;
+  color: rgba(201,168,76,0.85);
   cursor: pointer;
   transition: all 0.2s;
   font-family: inherit;
 }
-.sug-btn:hover { background: #2d5a27; color: #fff; border-color: #2d5a27; }
+.sug-btn:hover {
+  background: rgba(201,168,76,0.14);
+  border-color: rgba(201,168,76,0.5);
+  color: #c9a84c;
+}
 
-/* Input */
+/* ---- Zone de saisie ---- */
 .avatar-input-row {
-  border-top: 1px solid #eee;
+  border-top: 1px solid rgba(255,255,255,0.07);
   padding: 10px 12px;
   display: flex;
   gap: 8px;
   align-items: center;
+  background: rgba(0,0,0,0.2);
 }
 
 #mic-btn {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 2px solid #2d5a27;
-  background: #fff;
+  border: 1px solid rgba(201,168,76,0.3);
+  background: rgba(255,255,255,0.04);
   cursor: pointer;
   font-size: 1rem;
   display: flex;
@@ -344,38 +493,43 @@
   transition: all 0.2s;
   flex-shrink: 0;
 }
-#mic-btn.listening { background: #e74c3c; border-color: #e74c3c; animation: pulse 0.8s infinite; }
+#mic-btn:hover { background: rgba(201,168,76,0.1); border-color: rgba(201,168,76,0.5); }
+#mic-btn.listening { background: rgba(220,60,60,0.25); border-color: #e74c3c; animation: pulse 0.8s infinite; }
 
 #avatar-input {
   flex: 1;
-  border: 1px solid #ddd;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 18px;
-  padding: 8px 13px;
+  padding: 8px 14px;
   font-size: 0.85rem;
   font-family: inherit;
   outline: none;
+  background: rgba(255,255,255,0.05);
+  color: #e0e8e0;
   transition: border-color 0.2s;
 }
-#avatar-input:focus { border-color: #2d5a27; }
+#avatar-input::placeholder { color: rgba(240,244,240,0.3); }
+#avatar-input:focus { border-color: rgba(201,168,76,0.4); }
 
 #avatar-send {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: #2d5a27;
+  background: linear-gradient(135deg, #c9a84c, #a88030);
   border: none;
-  color: #fff;
+  color: #050d05;
   cursor: pointer;
   font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  transition: all 0.2s;
   flex-shrink: 0;
+  box-shadow: 0 2px 10px rgba(201,168,76,0.3);
 }
-#avatar-send:hover { background: #1a3a15; }
+#avatar-send:hover { background: linear-gradient(135deg, #d4b860, #c9a84c); box-shadow: 0 4px 16px rgba(201,168,76,0.4); }
 
-/* Talking animation indicator */
+/* Indicateur de frappe */
 .speaking-dots {
   display: flex;
   gap: 4px;
@@ -384,23 +538,24 @@
   align-self: flex-start;
 }
 .speaking-dots span {
-  width: 7px;
-  height: 7px;
-  background: #2d5a27;
+  width: 6px;
+  height: 6px;
+  background: rgba(201,168,76,0.6);
   border-radius: 50%;
   animation: bounce 0.8s infinite;
 }
 .speaking-dots span:nth-child(2) { animation-delay: 0.15s; }
 .speaking-dots span:nth-child(3) { animation-delay: 0.3s; }
 
+/* ---- Animations ---- */
 @keyframes blink {
   0%, 90%, 100% { transform: scaleY(1); }
-  95% { transform: scaleY(0.1); }
+  95% { transform: scaleY(0.08); }
 }
 
 @keyframes talk {
-  from { height: 4px; }
-  to { height: 12px; }
+  from { height: 4px; border-radius: 0 0 6px 6px; }
+  to { height: 13px; border-radius: 0 0 14px 14px; }
 }
 
 @keyframes bounce {
@@ -420,7 +575,7 @@
 
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.2); opacity: 0.7; }
+  50% { transform: scale(1.18); opacity: 0.75; }
 }
 
 @media (max-width: 480px) {
