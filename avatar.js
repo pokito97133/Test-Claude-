@@ -82,7 +82,7 @@ const KEYWORDS = {
 // Section anchors for navigation
 const NAV_TARGETS = {
   fr: {
-    team:     document.documentElement.lang === 'en' ? '#team' : '#equipe',
+    team:     document.documentElement.lang === 'en' ? '#team' : '#presentation',
     services: '#services',
     gallery:  document.documentElement.lang === 'en' ? '#gallery' : '#galerie',
     contact:  '#contact',
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Scroll-aware: update bubble text based on current section
-  const sections = ['equipe', 'team', 'services', 'galerie', 'gallery', 'contact'];
+  const sections = ['presentation', 'team', 'services', 'galerie', 'gallery', 'contact'];
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting && !avatarOpen) {
@@ -374,7 +374,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!bubble) return;
         const l = getLang();
         const hints = {
-          fr: { equipe: '💚 Vous découvrez l\'équipe !', services: '🌿 Nos 6 expertises vous attendent', galerie: '📸 Nos réalisations à Saint-Barth', contact: '📞 Un devis gratuit ? Je vous aide !' },
+          fr: { presentation: '💚 Vous découvrez l\'équipe !', services: '🌿 Nos 6 expertises vous attendent', galerie: '📸 Nos réalisations à Saint-Barth', contact: '📞 Un devis gratuit ? Je vous aide !' },
           en: { team: '💚 Meet our passionate team!', services: '🌿 Discover our 6 areas of expertise', gallery: '📸 Our creations in Saint-Barth', contact: '📞 Free quote? I can help you!' },
         };
         const hint = (hints[l] || {})[id];
