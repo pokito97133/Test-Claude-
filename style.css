@@ -50,7 +50,7 @@ img { display: block; max-width: 100%; }
   position: sticky;
   top: 70px;
   z-index: 99;
-  background: var(--cream);
+  background: var(--dark-mid);
   border-bottom: 1px solid rgba(184,145,58,0.22);
   display: flex;
   justify-content: center;
@@ -61,7 +61,7 @@ img { display: block; max-width: 100%; }
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--dark);
+  color: rgba(245,240,230,0.75);
   padding: 12px 28px;
   position: relative;
   transition: color 0.2s;
@@ -74,7 +74,7 @@ img { display: block; max-width: 100%; }
   background: var(--gold);
   transition: left 0.25s ease, right 0.25s ease;
 }
-#subnav a:hover { color: var(--gold); }
+#subnav a:hover { color: var(--gold-light); }
 #subnav a:hover::after { left: 16px; right: 16px; }
 @media (max-width: 480px) {
   #subnav a { padding: 10px 14px; font-size: 0.66rem; letter-spacing: 0.1em; }
