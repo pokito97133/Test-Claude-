@@ -69,8 +69,16 @@ img { display: block; max-width: 100%; }
 }
 
 .logo { display: flex; align-items: center; margin-right: auto; }
-.logo-img { height: 54px; width: auto; transition: opacity 0.2s; }
-.logo-img:hover { opacity: 0.85; }
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  color: #fff;
+  font-style: italic;
+  transition: color 0.2s;
+}
+.logo:hover .logo-text { color: var(--gold-light); }
 
 .nav-links {
   display: flex;
