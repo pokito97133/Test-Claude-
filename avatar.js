@@ -306,6 +306,8 @@ function openAvatar() {
   avatarOpen = true;
   document.getElementById('avatar-window')?.classList.add('open');
   document.getElementById('avatar-bubble') && (document.getElementById('avatar-bubble').style.display = 'none');
+  // Init 3D avatar now that the window is visible
+  if (window.leaInit3D) window.leaInit3D();
   renderSuggestions();
   if (!avatarGreeted) {
     avatarGreeted = true;

@@ -390,6 +390,10 @@
   window.leaStartTalking = function () { _talking = true; };
   window.leaStopTalking  = function () { _talking = false; };
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot);
-  else boot();
+  let _initialized = false;
+  window.leaInit3D = function () {
+    if (_initialized) return;
+    _initialized = true;
+    boot();
+  };
 })();
