@@ -156,12 +156,13 @@
 .avatar-header {
   background: linear-gradient(135deg, #0a1a0a 0%, #121e10 60%, #1a2c14 100%);
   border-bottom: 1px solid rgba(201,168,76,0.18);
-  padding: 18px 16px 14px;
+  padding: 14px 16px 12px;
   display: flex;
   align-items: center;
   gap: 14px;
   position: relative;
   overflow: hidden;
+  min-height: 180px;
 }
 .avatar-header::before {
   content: '';
@@ -171,26 +172,17 @@
   pointer-events: none;
 }
 
-/* ---- Visage 3D Léa ---- */
+/* ---- Zone 3D Léa (canvas Three.js) ---- */
 #avatar-3d {
   flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.5), 0 0 12px rgba(201,168,76,0.12);
 }
 
 .avatar-face {
-  width: 60px;
-  height: 62px;
-  background: radial-gradient(ellipse at 38% 35%, #fcd5b0, #e8a878 55%, #d08858);
-  border-radius: 48% 48% 42% 42%;
-  position: relative;
-  box-shadow:
-    2px 5px 14px rgba(0,0,0,0.45),
-    inset -4px -4px 10px rgba(0,0,0,0.18),
-    inset 3px 3px 8px rgba(255,220,180,0.35);
-  transform: perspective(140px) rotateY(-4deg);
+  display: none;
 }
 
 /* Joues rosées */

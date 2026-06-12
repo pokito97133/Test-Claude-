@@ -143,15 +143,14 @@ function speak(text) {
   if (!voice) voice = voices.find(v => v.lang.startsWith(l === 'fr' ? 'fr' : 'en'));
   if (voice) utter.voice = voice;
 
-  const mouth = document.getElementById('avatarMouth');
   utter.onstart = () => {
     isSpeaking = true;
-    if (mouth) mouth.classList.add('talking');
+    if (window.leaStartTalking) window.leaStartTalking();
     setStatus(l === 'fr' ? 'Je parle...' : 'Speaking...');
   };
   utter.onend = () => {
     isSpeaking = false;
-    if (mouth) mouth.classList.remove('talking');
+    if (window.leaStopTalking) window.leaStopTalking();
     setStatus(l === 'fr' ? 'Votre guide' : 'Your guide');
   };
   window.speechSynthesis.speak(utter);

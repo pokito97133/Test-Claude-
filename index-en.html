@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="avatar.css" />
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
 </head>
 <body>
 
@@ -290,18 +291,7 @@
     <div id="avatar-bubble" style="display:none"></div>
     <div id="avatar-window">
       <div class="avatar-header">
-        <div id="avatar-3d">
-          <div class="avatar-face">
-            <div class="avatar-hair"></div>
-            <div class="avatar-eyes">
-              <div class="eye left"><div class="pupil"></div></div>
-              <div class="eye right"><div class="pupil"></div></div>
-            </div>
-            <div class="avatar-mouth" id="avatarMouth"></div>
-          </div>
-          <div class="avatar-neck"></div>
-          <div class="avatar-body"></div>
-        </div>
+        <div id="avatar-3d"></div>
         <div class="avatar-info">
           <div class="avatar-name">Léa</div>
           <div class="avatar-status" id="avatarStatus">Your guide</div>
@@ -328,5 +318,6 @@
 
   <script src="script.js"></script>
   <script src="avatar.js"></script>
+  <script src="avatar3d.js"></script>
 </body>
 </html>
