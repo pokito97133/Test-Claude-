@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les Jardiniers – Saint-Barthélemy</title>
+  <title>Les Jardiniers – Excellence & Prestige</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="chatbot.css" />
   <link rel="stylesheet" href="avatar.css" />
 </head>
 <body>
+
+  <div class="bg-mesh"></div>
 
   <!-- NAVIGATION -->
   <nav id="navbar">
@@ -19,189 +23,253 @@
       <button class="menu-toggle" id="menuToggle">&#9776;</button>
       <ul class="nav-links" id="navLinks">
         <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#equipe">Équipe</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#galerie">Galerie</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="index-en.html" class="lang-switch" title="English version">🇬🇧 EN</a></li>
+        <li><a href="index-en.html" class="lang-switch">🇬🇧 EN</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- ACCUEIL -->
+  <!-- HERO -->
   <section id="accueil" class="hero">
-    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <img src="images/logo.png" alt="Les Jardiniers" class="hero-logo" />
-      <p class="hero-sub">Entretien &amp; Création de Jardins d'Exception</p>
-      <p class="hero-location">— Saint-Barthélemy —</p>
-      <a href="#contact" class="btn">Demander un devis</a>
+      <p class="hero-eyebrow reveal">Saint-Barthélemy · Destinations de prestige</p>
+      <h1 class="hero-title reveal">
+        Les<br><em class="gold italic">Jardiniers</em>
+      </h1>
+      <p class="hero-sub reveal">L'excellence au service de jardins d'exception depuis plus de 15 ans</p>
+      <div class="hero-actions reveal">
+        <a href="#equipe" class="btn-primary">Découvrir l'équipe</a>
+        <a href="#contact" class="btn-ghost">Demander un devis</a>
+      </div>
     </div>
+    <div class="hero-scroll"><span></span></div>
   </section>
 
-  <!-- À PROPOS -->
-  <section id="apropos" class="section">
+  <!-- STATS -->
+  <div class="stats-bar reveal">
+    <div class="stat">
+      <span class="stat-num">15<sup>+</sup></span>
+      <span class="stat-label">Années d'expérience</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Experts passionnés</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">500<sup>+</sup></span>
+      <span class="stat-label">Jardins réalisés</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">1</span>
+      <span class="stat-label">Île d'exception</span>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <section id="equipe" class="section">
     <div class="container">
-      <h2>À propos</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <h3 class="about-title">Passionnés <em>par la nature</em> de Saint-Barth</h3>
-          <p>
-            Nés de l'amour de cette île et de sa végétation luxuriante, <strong>Les Jardiniers</strong>
-            sont une équipe de 6 professionnels passionnés, unis par une vision commune :
-            l'excellence au service de vos espaces verts.
-          </p>
-          <p>
-            Fort de <strong>plus de 15 ans d'expérience</strong> sur l'île de Saint-Barthélemy,
-            nous avons accompagné des centaines de propriétaires, villas et établissements de
-            prestige dans la création et l'entretien de leurs jardins tropicaux.
-          </p>
-          <p>
-            Notre approche allie <strong>élégance et professionnalisme</strong> — chaque intervention
-            est pensée comme une œuvre, où la précision du geste rencontre le raffinement du résultat.
-          </p>
-          <p>
-            La discrétion et l'intimité de nos clients sont au cœur de notre engagement.
-            Nous intervenons avec professionnalisme et confidentialité sur chaque propriété
-            qui nous est confiée.
-          </p>
-        </div>
-        <div class="about-team">
-          <img src="images/equipe.jpeg" alt="L'équipe Les Jardiniers au travail" class="team-photo" />
-        </div>
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Notre équipe</p>
+        <h2 class="section-title">Des <em class="gold">passionnés</em><br>à votre service</h2>
+        <p class="section-desc">Six professionnels unis par l'amour de la nature et l'exigence du geste parfait.</p>
       </div>
-      <div class="about-values">
-        <div class="value">🌿 Respect de l'environnement</div>
-        <div class="value">✂️ Expertise locale</div>
-        <div class="value">⏰ Ponctualité &amp; fiabilité</div>
-        <div class="value">💬 Écoute &amp; conseil</div>
+      <div class="team-grid">
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre1.jpeg" alt="Rémi" />
+            </div>
+          </div>
+          <h3 class="team-name">Rémi</h3>
+          <p class="team-role">Co-fondateur · Chef de projet</p>
+          <p class="team-bio">Visionnaire et stratège, Rémi orchestre chaque projet avec précision et passion depuis plus de 15 ans sur l'île.</p>
+          <a href="tel:+590690483934" class="team-contact">📞 06 90 48 39 34</a>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre2.jpeg" alt="Jonathan" />
+            </div>
+          </div>
+          <h3 class="team-name">Jonathan</h3>
+          <p class="team-role">Co-fondateur · Expert terrain</p>
+          <p class="team-bio">Expert du terrain, Jonathan maîtrise l'art de transformer chaque espace en jardin d'exception à Saint-Barth.</p>
+          <a href="tel:+590690492983" class="team-contact">📞 06 90 49 29 83</a>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre3.jpeg" alt="Expert Paysagiste" />
+            </div>
+          </div>
+          <h3 class="team-name">Expert Paysagiste</h3>
+          <p class="team-role">Conception & Création</p>
+          <p class="team-bio">Spécialiste de la conception de jardins tropicaux, il donne vie aux espaces les plus exigeants avec subtilité.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre4.jpeg" alt="Maître Jardinier" />
+            </div>
+          </div>
+          <h3 class="team-name">Maître Jardinier</h3>
+          <p class="team-role">Entretien & Taille</p>
+          <p class="team-bio">Sa précision du geste et sa connaissance intime des végétaux garantissent un entretien absolument impeccable.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar" style="--c1:#1a2a00;--c2:#3a5a00">
+              <span class="avatar-initial">✦</span>
+            </div>
+          </div>
+          <h3 class="team-name">Spécialiste Irrigation</h3>
+          <p class="team-role">Arrosage & Systèmes</p>
+          <p class="team-bio">Expert en systèmes d'irrigation intelligents adaptés au microclimat unique de Saint-Barthélemy.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar" style="--c1:#2a1000;--c2:#5a2a00">
+              <span class="avatar-initial">✦</span>
+            </div>
+          </div>
+          <h3 class="team-name">Expert Plantation</h3>
+          <p class="team-role">Plantation & Aménagement</p>
+          <p class="team-bio">Sa passion pour la flore tropicale sublime chaque propriété d'une végétation luxuriante et harmonieuse.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
-  <section id="services" class="section section-alt">
+  <section id="services" class="section section-tinted">
     <div class="container">
-      <h2>Nos services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">✂️</div>
-          <h3>Entretien régulier</h3>
-          <p>Tonte, taille, désherbage et soins réguliers pour garder votre jardin impeccable toute l'année.</p>
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Nos expertises</p>
+        <h2 class="section-title">Un savoir-faire<br><em class="gold">d'exception</em></h2>
+      </div>
+      <div class="services-list">
+        <div class="service-item reveal">
+          <span class="service-num">01</span>
+          <div>
+            <h3>Entretien régulier</h3>
+            <p>Tonte, taille, désherbage — un jardin impeccable toute l'année.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🌱</div>
-          <h3>Création sur mesure</h3>
-          <p>Conception et réalisation de jardins tropicaux uniques, adaptés à votre propriété et votre style.</p>
+        <div class="service-item reveal">
+          <span class="service-num">02</span>
+          <div>
+            <h3>Création sur mesure</h3>
+            <p>Conception de jardins tropicaux uniques, adaptés à votre propriété et votre style.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🌳</div>
-          <h3>Taille &amp; élagage</h3>
-          <p>Taille précise des haies, arbustes et arbres pour des formes nettes et une végétation saine.</p>
+        <div class="service-item reveal">
+          <span class="service-num">03</span>
+          <div>
+            <h3>Taille & élagage</h3>
+            <p>Formes précises, végétation saine — l'art de la taille à son apogée.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🌺</div>
-          <h3>Plantation &amp; aménagement</h3>
-          <p>Sélection et mise en place de plantes tropicales pour embellir et valoriser vos espaces extérieurs.</p>
+        <div class="service-item reveal">
+          <span class="service-num">04</span>
+          <div>
+            <h3>Plantation & aménagement</h3>
+            <p>Sélection et mise en place de plantes tropicales d'exception pour embellir vos espaces.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">💧</div>
-          <h3>Arrosage &amp; irrigation</h3>
-          <p>Installation et maintenance de systèmes d'arrosage automatique adaptés au climat de Saint-Barth.</p>
+        <div class="service-item reveal">
+          <span class="service-num">05</span>
+          <div>
+            <h3>Arrosage & irrigation</h3>
+            <p>Systèmes automatiques intelligents adaptés au microclimat de Saint-Barth.</p>
+          </div>
         </div>
-        <div class="service-card">
-          <div class="service-icon">🍃</div>
-          <h3>Évacuation des déchets verts</h3>
-          <p>Ramassage et évacuation soignés de tous les déchets végétaux après chaque intervention.</p>
+        <div class="service-item reveal">
+          <span class="service-num">06</span>
+          <div>
+            <h3>Évacuation des déchets verts</h3>
+            <p>Collecte soignée et évacuation de tous déchets végétaux après chaque intervention.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALERIE -->
+  <!-- GALLERY -->
   <section id="galerie" class="section">
     <div class="container">
-      <h2>Galerie</h2>
-      <p class="section-desc">Quelques-unes de nos réalisations à Saint-Barthélemy.</p>
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Réalisations</p>
+        <h2 class="section-title">Nos <em class="gold">œuvres</em><br>à Saint-Barth</h2>
+        <p class="section-desc">Quelques-unes de nos créations sur l'île de Saint-Barthélemy.</p>
+      </div>
       <div class="gallery-grid">
-        <div class="gallery-item">
-          <img src="images/jardin1.png" alt="Héliconias et galets – jardin tropical" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/equipe.jpeg" alt="L'équipe au travail" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/jardin2.png" alt="Cordylines et palmiers tropicaux" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/allee.png" alt="Allée en bois – jardin tropical" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/jardin3.jpeg" alt="Jardin – Les Jardiniers" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/arrosage.jpeg" alt="Système d'arrosage – pelouse" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/pergola.jpeg" alt="Pergola en bois et plantes tropicales" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/villa-mer.jpeg" alt="Villa avec vue mer – cactus et frangipaniers" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/terrasse.jpeg" alt="Terrasse en bois – végétation tropicale" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/jardin4.jpeg" alt="Réalisation Les Jardiniers" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/jardin5.jpeg" alt="Réalisation Les Jardiniers" />
-        </div>
-        <div class="gallery-item">
-          <img src="images/jardin6.jpeg" alt="Réalisation Les Jardiniers" />
-        </div>
+        <div class="gallery-item reveal"><img src="images/jardin1.png" alt="Jardin tropical" /></div>
+        <div class="gallery-item reveal"><img src="images/allee.png" alt="Allée en bois" /></div>
+        <div class="gallery-item reveal"><img src="images/jardin2.png" alt="Palmiers tropicaux" /></div>
+        <div class="gallery-item reveal"><img src="images/villa-mer.jpeg" alt="Villa vue mer" /></div>
+        <div class="gallery-item reveal"><img src="images/pergola.jpeg" alt="Pergola tropicale" /></div>
+        <div class="gallery-item reveal"><img src="images/terrasse.jpeg" alt="Terrasse en bois" /></div>
+        <div class="gallery-item reveal"><img src="images/jardin3.jpeg" alt="Jardin" /></div>
+        <div class="gallery-item reveal"><img src="images/arrosage.jpeg" alt="Irrigation" /></div>
+        <div class="gallery-item reveal"><img src="images/jardin4.jpeg" alt="Réalisation" /></div>
       </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section section-alt">
+  <section id="contact" class="section section-tinted">
     <div class="container">
-      <h2>Contact &amp; Devis</h2>
-      <p class="section-desc">Contactez-nous pour un devis gratuit ou toute question.</p>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <strong>📍 Zone d'intervention</strong>
-            <span>Saint-Barthélemy (97133)</span>
-          </div>
-          <div class="contact-item">
-            <strong>📞 Rémi</strong>
-            <span><a href="tel:+590690483934">06 90 48 39 34</a></span>
-          </div>
-          <div class="contact-item">
-            <strong>📞 Jonathan</strong>
-            <span><a href="tel:+590690492983">06 90 49 29 83</a></span>
-          </div>
-          <div class="contact-item">
-            <strong>📧 Email</strong>
-            <span><a href="mailto:les.jardiniers@outlook.com">les.jardiniers@outlook.com</a></span>
-          </div>
-          <div class="contact-item">
-            <strong>📸 Instagram</strong>
-            <span><a href="https://instagram.com/les_jardiniers_st_barth" target="_blank">@les_jardiniers_st_barth</a></span>
-          </div>
-          <div class="contact-item">
-            <strong>🕐 Horaires</strong>
-            <span>Lundi – Samedi : 7h – 17h</span>
+      <div class="contact-layout">
+        <div class="contact-left reveal">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">Parlons de<br>votre <em class="gold">jardin</em></h2>
+          <p class="contact-tagline">Devis gratuit · Réponse rapide · Confidentialité garantie</p>
+          <div class="contact-details">
+            <a href="tel:+590690483934" class="contact-card">
+              <span class="cc-icon">📞</span>
+              <div><strong>Rémi</strong><span>06 90 48 39 34</span></div>
+            </a>
+            <a href="tel:+590690492983" class="contact-card">
+              <span class="cc-icon">📞</span>
+              <div><strong>Jonathan</strong><span>06 90 49 29 83</span></div>
+            </a>
+            <a href="mailto:les.jardiniers@outlook.com" class="contact-card">
+              <span class="cc-icon">📧</span>
+              <div><strong>Email</strong><span>les.jardiniers@outlook.com</span></div>
+            </a>
+            <a href="https://instagram.com/les_jardiniers_st_barth" target="_blank" class="contact-card">
+              <span class="cc-icon">📸</span>
+              <div><strong>Instagram</strong><span>@les_jardiniers_st_barth</span></div>
+            </a>
+            <div class="contact-card">
+              <span class="cc-icon">🕐</span>
+              <div><strong>Horaires</strong><span>Lun – Sam : 7h – 17h</span></div>
+            </div>
+            <div class="contact-card">
+              <span class="cc-icon">📍</span>
+              <div><strong>Zone</strong><span>Saint-Barthélemy (97133)</span></div>
+            </div>
           </div>
         </div>
-        <form class="contact-form" onsubmit="sendForm(event)">
+        <form class="contact-form reveal" onsubmit="sendForm(event)">
           <input type="text" name="nom" placeholder="Votre nom" required />
           <input type="tel" name="tel" placeholder="Votre téléphone" required />
           <input type="email" name="email" placeholder="Votre email (optionnel)" />
-          <textarea name="message" rows="4" placeholder="Décrivez votre besoin..." required></textarea>
-          <button type="submit" class="btn btn-dark">Envoyer ma demande</button>
+          <textarea name="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+          <button type="submit" class="btn-primary full">Envoyer ma demande</button>
           <p id="form-feedback" class="form-feedback"></p>
         </form>
       </div>
@@ -209,8 +277,12 @@
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Les Jardiniers – Saint-Barthélemy &nbsp;|&nbsp; <a href="mailto:les.jardiniers@outlook.com">les.jardiniers@outlook.com</a></p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="images/logo.png" alt="Les Jardiniers" class="footer-logo" />
+      <p>© 2026 Les Jardiniers – Saint-Barthélemy</p>
+      <a href="mailto:les.jardiniers@outlook.com">les.jardiniers@outlook.com</a>
+    </div>
   </footer>
 
   <!-- AVATAR VOCAL -->
@@ -253,7 +325,6 @@
   </div>
 
   <script src="script.js"></script>
-  <script src="chatbot.js"></script>
   <script src="avatar.js"></script>
 </body>
 </html>

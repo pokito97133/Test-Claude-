@@ -1,24 +1,34 @@
-// Navbar shadow on scroll
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
-  document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+  document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-// Mobile menu toggle
-document.getElementById('menuToggle').addEventListener('click', () => {
-  document.getElementById('navLinks').classList.toggle('open');
-});
+// Mobile menu
+const toggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+if (toggle && navLinks) {
+  toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', () => navLinks.classList.remove('open'))
+  );
+}
 
-// Close mobile menu on link click
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('open');
-  });
-});
+// Scroll reveal
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.12 }
+);
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Contact form feedback (sans backend)
+// Contact form
 function sendForm(e) {
   e.preventDefault();
-  const feedback = document.getElementById('form-feedback');
-  feedback.textContent = '✅ Merci ! Votre message a bien été envoyé. Nous vous répondrons rapidement.';
-  e.target.reset();
+  const fb = document.getElementById('form-feedback');
+  if (fb) {
+    const isEn = document.documentElement.lang === 'en';
+    fb.textContent = isEn
+      ? '✓ Message sent! We will get back to you shortly.'
+      : '✓ Message envoyé ! Nous vous répondrons rapidement.';
+    setTimeout(() => { fb.textContent = ''; e.target.reset(); }, 4500);
+  }
 }
