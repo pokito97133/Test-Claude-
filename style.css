@@ -18,6 +18,7 @@
   --text-muted:   rgba(26,26,18,0.52);
   --text-light:   #f5f0e6;
   --font-serif:   'Playfair Display', Georgia, serif;
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-sans:    'Inter', system-ui, sans-serif;
 }
 
@@ -149,14 +150,15 @@ img { display: block; max-width: 100%; }
   font-weight: 500;
 }
 .hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3rem, 8vw, 6.5rem);
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 10vw, 8.5rem);
+  font-weight: 300;
+  letter-spacing: 0.06em;
   color: var(--text-light);
   line-height: 1.08;
   margin-bottom: 20px;
 }
-.hero-title .italic { font-style: italic; color: var(--gold-light); }
+.hero-title .italic { font-style: italic; color: var(--gold-light); font-weight: 400; }
 .hero-sub { font-size: 1rem; color: rgba(245,240,230,0.68); max-width: 520px; margin: 0 auto 40px; line-height: 1.75; }
 .hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
 .hero-scroll { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); z-index: 2; }
