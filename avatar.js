@@ -243,7 +243,7 @@ function renderSuggestions() {
 function scrollToSection(intent) {
   const l = getLang();
   const sectionMap = {
-    team:     l === 'fr' ? '#equipe' : '#team',
+    team:     l === 'fr' ? '#presentation' : '#team',
     services: '#services',
     gallery:  l === 'fr' ? '#galerie' : '#gallery',
     contact:  '#contact',
