@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Gardeners – Excellence & Prestige · Saint-Barthélemy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="avatar.css" />
+  <script src="three.min.js"></script>
+</head>
+<body>
+
+  <!-- TOP INFO BAR -->
+  <div id="topbar">
+    <span>Saint-Barthélemy · Excellence in Garden Design & Maintenance</span>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <img src="images/logo.png" alt="Les Jardiniers" class="logo-img" />
+        <span class="logo-text">Les Jardiniers</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="lang-switch">🇫🇷 FR</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SECONDARY NAV BAR -->
+  <div id="subnav">
+    <a href="#home">Home</a>
+    <a href="#team">Team</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow reveal">Saint-Barthélemy · Prestige Destinations</p>
+      <h1 class="hero-title reveal">
+        The<br><em class="gold italic">Gardeners</em>
+      </h1>
+      <p class="hero-sub reveal">Excellence in exceptional garden care for over 15 years</p>
+      <div class="hero-actions reveal">
+        <a href="#team" class="btn-primary">Meet the team</a>
+        <a href="#contact" class="btn-ghost">Request a quote</a>
+      </div>
+    </div>
+    <div class="hero-scroll"><span></span></div>
+  </section>
+
+  <!-- STATS -->
+  <div class="stats-bar reveal">
+    <div class="stat">
+      <span class="stat-num">15<sup>+</sup></span>
+      <span class="stat-label">Years of experience</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">6</span>
+      <span class="stat-label">Passionate experts</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">500<sup>+</sup></span>
+      <span class="stat-label">Gardens completed</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">1</span>
+      <span class="stat-label">Exceptional island</span>
+    </div>
+  </div>
+
+  <!-- TEAM -->
+  <section id="team" class="section section-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Our team</p>
+        <h2 class="section-title"><em class="gold">Passionate</em><br>at your service</h2>
+        <p class="section-desc">Six professionals united by their love of nature and the pursuit of perfection.</p>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre1.jpeg" alt="Rémi" />
+            </div>
+          </div>
+          <h3 class="team-name">Rémi</h3>
+          <p class="team-role">Co-founder · Project Manager</p>
+          <p class="team-bio">Visionary and strategist, Rémi orchestrates every project with precision and passion for over 15 years on the island.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre2.jpeg" alt="Jonathan" />
+            </div>
+          </div>
+          <h3 class="team-name">Jonathan</h3>
+          <p class="team-role">Co-founder · Field Expert</p>
+          <p class="team-bio">A field expert, Jonathan masters the art of transforming every space into an exceptional garden in Saint-Barth.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre3.jpeg" alt="Landscape Expert" />
+            </div>
+          </div>
+          <h3 class="team-name">Landscape Expert</h3>
+          <p class="team-role">Design & Creation</p>
+          <p class="team-bio">Specialist in tropical garden design, he brings the most demanding spaces to life with elegance and subtlety.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar photo">
+              <img src="images/membre4.jpeg" alt="Master Gardener" />
+            </div>
+          </div>
+          <h3 class="team-name">Master Gardener</h3>
+          <p class="team-role">Maintenance & Pruning</p>
+          <p class="team-bio">His precise touch and intimate knowledge of plants ensure impeccably maintained gardens at all times.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar" style="--c1:#1a2a00;--c2:#3a5a00">
+              <span class="avatar-initial">✦</span>
+            </div>
+          </div>
+          <h3 class="team-name">Irrigation Specialist</h3>
+          <p class="team-role">Watering & Systems</p>
+          <p class="team-bio">Expert in smart irrigation systems tailored to the unique microclimate of Saint-Barthélemy.</p>
+        </div>
+
+        <div class="team-card reveal">
+          <div class="team-avatar-wrap">
+            <div class="team-avatar" style="--c1:#2a1000;--c2:#5a2a00">
+              <span class="avatar-initial">✦</span>
+            </div>
+          </div>
+          <h3 class="team-name">Planting Expert</h3>
+          <p class="team-role">Planting & Landscaping</p>
+          <p class="team-bio">His passion for tropical flora enhances every property with lush and harmonious vegetation.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Our expertise</p>
+        <h2 class="section-title">Exceptional<br><em class="gold">know-how</em></h2>
+      </div>
+      <div class="services-list">
+        <div class="service-item reveal">
+          <span class="service-num">01</span>
+          <div>
+            <h3>Regular maintenance</h3>
+            <p>Mowing, pruning, weeding — a flawless garden year-round.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <span class="service-num">02</span>
+          <div>
+            <h3>Custom creation</h3>
+            <p>Unique tropical garden design tailored to your property and style.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <span class="service-num">03</span>
+          <div>
+            <h3>Pruning & trimming</h3>
+            <p>Precise shapes, healthy vegetation — the art of pruning at its finest.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <span class="service-num">04</span>
+          <div>
+            <h3>Planting & landscaping</h3>
+            <p>Selection and installation of exceptional tropical plants to beautify your spaces.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <span class="service-num">05</span>
+          <div>
+            <h3>Watering & irrigation</h3>
+            <p>Smart automatic systems adapted to the microclimate of Saint-Barth.</p>
+          </div>
+        </div>
+        <div class="service-item reveal">
+          <span class="service-num">06</span>
+          <div>
+            <h3>Green waste removal</h3>
+            <p>Careful collection and removal of all plant waste after each visit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section section-tinted">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Portfolio</p>
+        <h2 class="section-title">Our <em class="gold">creations</em><br>in Saint-Barth</h2>
+        <p class="section-desc">A selection of our work across the island of Saint-Barthélemy.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal"><img src="images/jardin1.png" alt="Tropical garden" /></div>
+        <div class="gallery-item reveal"><img src="images/allee.png" alt="Wooden walkway" /></div>
+        <div class="gallery-item reveal"><img src="images/jardin2.png" alt="Tropical palms" /></div>
+        <div class="gallery-item reveal"><img src="images/villa-mer.jpeg" alt="Sea view villa" /></div>
+        <div class="gallery-item reveal"><img src="images/pergola.jpeg" alt="Tropical pergola" /></div>
+        <div class="gallery-item reveal"><img src="images/terrasse.jpeg" alt="Wooden terrace" /></div>
+        <div class="gallery-item reveal"><img src="images/jardin3.jpeg" alt="Garden" /></div>
+        <div class="gallery-item reveal"><img src="images/arrosage.jpeg" alt="Irrigation" /></div>
+        <div class="gallery-item reveal"><img src="images/jardin4.jpeg" alt="Creation" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="contact-layout">
+        <div class="contact-left reveal">
+          <p class="section-eyebrow">Contact</p>
+          <h2 class="section-title">Let's talk about<br>your <em class="gold">garden</em></h2>
+          <p class="contact-tagline">Free quote · Quick response · Full confidentiality</p>
+          <div class="contact-details">
+            <a href="tel:+590690483934" class="contact-card">
+              <span class="cc-icon">📞</span>
+              <div><strong>Rémi</strong><span>06 90 48 39 34</span></div>
+            </a>
+            <a href="tel:+590690492983" class="contact-card">
+              <span class="cc-icon">📞</span>
+              <div><strong>Jonathan</strong><span>06 90 49 29 83</span></div>
+            </a>
+            <a href="mailto:les.jardiniers@outlook.com" class="contact-card">
+              <span class="cc-icon">📧</span>
+              <div><strong>Email</strong><span>les.jardiniers@outlook.com</span></div>
+            </a>
+            <a href="https://instagram.com/les_jardiniers_st_barth" target="_blank" class="contact-card">
+              <span class="cc-icon">📸</span>
+              <div><strong>Instagram</strong><span>@les_jardiniers_st_barth</span></div>
+            </a>
+            <div class="contact-card">
+              <span class="cc-icon">🕐</span>
+              <div><strong>Hours</strong><span>Mon – Sat: 7am – 5pm</span></div>
+            </div>
+            <div class="contact-card">
+              <span class="cc-icon">📍</span>
+              <div><strong>Area</strong><span>Saint-Barthélemy (97133)</span></div>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" onsubmit="sendForm(event)">
+          <input type="text" name="nom" placeholder="Your name" required />
+          <input type="tel" name="tel" placeholder="Your phone number" required />
+          <input type="email" name="email" placeholder="Your email (optional)" />
+          <textarea name="message" rows="5" placeholder="Describe your project..." required></textarea>
+          <button type="submit" class="btn-primary full">Send my request</button>
+          <p id="form-feedback" class="form-feedback"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="images/logo.png" alt="Les Jardiniers" class="footer-logo" />
+      <p>© 2026 Les Jardiniers – Saint-Barthélemy</p>
+      <a href="mailto:les.jardiniers@outlook.com">les.jardiniers@outlook.com</a>
+    </div>
+  </footer>
+
+  <!-- AVATAR VOCAL -->
+  <div id="avatar-launcher">
+    <div id="avatar-bubble" style="display:none"></div>
+    <div id="avatar-window">
+      <div class="avatar-header">
+        <div id="avatar-3d"></div>
+        <div class="avatar-info">
+          <div class="avatar-name">Léa</div>
+          <div class="avatar-status" id="avatarStatus">Your guide</div>
+        </div>
+        <button id="avatar-close">✕</button>
+      </div>
+      <div class="avatar-messages" id="avatar-messages"></div>
+      <div class="avatar-suggestions" id="avatar-suggestions"></div>
+      <div class="avatar-input-row">
+        <button id="mic-btn" title="Speak">🎤</button>
+        <input type="text" id="avatar-input" placeholder="Type or speak..." />
+        <button id="avatar-send">➤</button>
+      </div>
+    </div>
+    <button id="avatar-btn">
+      <div class="avatar-face-mini">
+        <div class="eye-mini l"></div>
+        <div class="eye-mini r"></div>
+        <div class="mouth-mini"></div>
+      </div>
+      <span class="avatar-badge"></span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="avatar.js"></script>
+  <script src="avatar3d.js"></script>
+</body>
+</html>
