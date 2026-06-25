@@ -3,20 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Les Jardiniers – Création et entretien de jardins à Saint-Barthélemy</title>
+  <title>Les Jardiniers – Jardins d'exception à Saint-Barthélemy</title>
+  <meta name="description" content="Création et entretien de jardins d'exception pour des extérieurs à Saint-Barthélemy. Expertise locale, savoir-faire paysager, service personnalisé." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
-<body>
+<body class="page-home">
 
-  <!-- ===== HEADER ===== -->
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__contacts">
+        <a href="tel:+590690000000" class="topbar__contact">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          +590 690 XX XX XX
+        </a>
+        <a href="mailto:contact@lesjardiniers-saintbarth.com" class="topbar__contact">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          contact@lesjardiniers-saintbarth.com
+        </a>
+      </div>
+      <div class="topbar__social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </a>
+        <a href="#" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header class="header" id="header">
     <div class="header__inner container">
-      <a href="#" class="logo">
-        <span class="logo__pre">LES</span>
-        <span class="logo__name">JARDINIERS</span>
-        <span class="logo__sub">CRÉATION ET ENTRETIEN<br>DE JARDINS</span>
+      <a href="index.html" class="logo">
+        <div class="logo__circle">
+          <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="26" cy="26" r="26" fill="#2C4A2E"/>
+            <circle cx="26" cy="26" r="23" stroke="rgba(255,255,255,0.15)" stroke-width="0.5" fill="none"/>
+            <circle cx="18" cy="15" r="4" fill="white" opacity="0.85"/>
+            <path d="M12 28 C12 21 24 21 24 28 L22 38 L14 38Z" fill="white" opacity="0.85"/>
+            <circle cx="32" cy="16" r="3.5" fill="white" opacity="0.75"/>
+            <path d="M27 28 C27 22 37 22 37 28 L35 38 L29 38Z" fill="white" opacity="0.7"/>
+            <path d="M25 35 C23 31 22 27 26 24 C30 27 29 31 27 35Z" fill="#5DA862" opacity="0.75"/>
+          </svg>
+        </div>
+        <div class="logo__text">
+          <span class="logo__name">LES JARDINIERS</span>
+          <span class="logo__sub">SAINT-BARTHÉLEMY</span>
+        </div>
       </a>
 
       <button class="burger" id="burger" aria-label="Menu">
@@ -25,382 +62,340 @@
 
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="#accueil" class="nav__link">Accueil</a></li>
-          <li><a href="#services" class="nav__link">Nos Services</a></li>
-          <li><a href="#realisations" class="nav__link">Réalisations</a></li>
-          <li><a href="#apropos" class="nav__link">À Propos</a></li>
-          <li><a href="#contact" class="nav__link">Contact</a></li>
+          <li><a href="index.html" class="nav__link active">Accueil</a></li>
+          <li><a href="services.html" class="nav__link">Nos Services</a></li>
+          <li><a href="pour-qui.html" class="nav__link">Pour qui</a></li>
+          <li><a href="realisations.html" class="nav__link">Réalisations</a></li>
+          <li><a href="avis-clients.html" class="nav__link">Avis clients</a></li>
+          <li><a href="a-propos.html" class="nav__link">À Propos</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
         </ul>
-        <a href="#contact" class="btn btn--cta">Devis Gratuit</a>
+        <a href="contact.html" class="btn btn--cta">Devis Gratuit</a>
       </nav>
     </div>
   </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="accueil">
+  <!-- HERO -->
+  <section class="hero">
     <div class="hero__overlay"></div>
     <div class="hero__content container">
-      <p class="hero__eyebrow">Saint-Barthélemy</p>
-      <h1 class="hero__title">L'art du jardin<br>à Saint-Barthélemy</h1>
-      <p class="hero__desc">Création et entretien de jardins<br>pour une clientèle d'exception</p>
+      <p class="hero__eyebrow">Saint-Barthélemy · Antilles</p>
+      <h1 class="hero__title">Des jardins d'exception<br><em>entretenus avec passion.</em></h1>
+      <p class="hero__desc">Création et entretien de jardins<br>pour des extérieurs d'exception à Saint-Barthélemy.</p>
       <div class="hero__actions">
-        <a href="#services" class="btn btn--outline">Découvrir nos services</a>
-        <a href="#realisations" class="btn btn--ghost">Voir nos réalisations</a>
+        <a href="services.html" class="btn btn--outline">Découvrir nos services</a>
+        <a href="realisations.html" class="btn btn--ghost">Voir nos réalisations</a>
       </div>
     </div>
-    <div class="hero__scroll">
-      <div class="hero__scroll-line"></div>
+
+    <!-- Floating social -->
+    <div class="hero__floating-social">
+      <a href="https://wa.me/590690000000" class="hero__social-btn" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      </a>
+      <a href="https://instagram.com" class="hero__social-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </a>
     </div>
+
+    <div class="hero__scroll"><div class="hero__scroll-line"></div></div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="services" id="services">
+  <!-- SERVICES PREVIEW -->
+  <section class="services-preview">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Ce que nous faisons</p>
-        <h2 class="section-title">Nos Services</h2>
-        <p class="section-desc">Des prestations haut de gamme adaptées à votre propriété et à votre style de vie.</p>
-      </div>
-
-      <div class="services__grid">
-        <div class="service-card">
+      <div class="services-preview__grid">
+        <div class="service-card fade-up">
           <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M24 4C24 4 10 14 10 26C10 33.7 16.3 40 24 40C31.7 40 38 33.7 38 26C38 14 24 4 24 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M24 40V44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M17 26C17 26 19 22 24 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C24 4 10 14 10 26C10 33.7 16.3 40 24 40C31.7 40 38 33.7 38 26C38 14 24 4 24 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 40V44" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17 26C17 26 19 22 24 22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
           <h3 class="service-card__title">Entretien Régulier</h3>
-          <p class="service-card__text">Pour les jardins résidentiels et de luxe, à la semaine ou à la quinzaine. Un suivi rigoureux pour un jardin toujours parfait.</p>
-          <a href="#contact" class="service-card__link">En savoir plus →</a>
+          <p class="service-card__text">Tonte, désherbage, taille et nettoyage. Nous maintenons votre jardin en parfait état toute l'année.</p>
+          <a href="services.html" class="service-card__link">En savoir plus →</a>
         </div>
 
-        <div class="service-card">
+        <div class="service-card fade-up">
           <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="30" width="36" height="12" rx="2" stroke="currentColor" stroke-width="2"/>
-              <path d="M12 30V20C12 14.477 16.477 10 22 10H26C31.523 10 36 14.477 36 20V30" stroke="currentColor" stroke-width="2"/>
-              <path d="M18 30V24H30V30" stroke="currentColor" stroke-width="2"/>
-              <path d="M24 10V6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="30" width="36" height="10" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 30V22C12 16.477 16.477 12 22 12H26C31.523 12 36 16.477 36 22V30" stroke="currentColor" stroke-width="2"/><path d="M24 12V8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
           </div>
           <h3 class="service-card__title">Création Paysagère</h3>
-          <p class="service-card__text">Un jardin sur mesure, créé pour vous. Conception et aménagement d'espaces verts uniques qui reflètent votre personnalité.</p>
-          <a href="#contact" class="service-card__link">En savoir plus →</a>
+          <p class="service-card__text">Conception et réalisation de jardins sur mesure, en harmonie avec l'architecture et le paysage de l'île.</p>
+          <a href="services.html" class="service-card__link">En savoir plus →</a>
         </div>
 
-        <div class="service-card">
+        <div class="service-card fade-up">
           <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 40L20 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M20 28L28 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="34" cy="14" r="6" stroke="currentColor" stroke-width="2"/>
-              <path d="M14 26L10 40L24 36L14 26Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 40L20 28M20 28L28 20M20 28L14 26L10 40L24 36L20 28Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="34" cy="14" r="6" stroke="currentColor" stroke-width="2"/></svg>
           </div>
           <h3 class="service-card__title">Taille & Élagage</h3>
-          <p class="service-card__text">Une végétation entretenue et parfaitement structurée. Nos experts façonnent vos arbres et haies avec précision et savoir-faire.</p>
-          <a href="#contact" class="service-card__link">En savoir plus →</a>
+          <p class="service-card__text">Haies, arbustes, palmiers — une végétation structurée et parfaitement entretenue, en toute sécurité.</p>
+          <a href="services.html" class="service-card__link">En savoir plus →</a>
         </div>
 
-        <div class="service-card">
+        <div class="service-card fade-up">
           <div class="service-card__icon">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 38C10 38 16 32 24 32C32 32 38 38 38 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M24 32V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M18 26C18 26 20 18 24 14C28 18 30 26 30 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14 34C14 34 16 28 20 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <path d="M34 34C34 34 32 28 28 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
+            <svg viewBox="0 0 48 48" fill="none"><path d="M10 38C10 38 16 32 24 32C32 32 38 38 38 38" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 32V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M18 26C18 26 20 18 24 14C28 18 30 26 30 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3 class="service-card__title">Plantation & Aménagement</h3>
-          <p class="service-card__text">Sélection des meilleures espèces tropicales, préparation des sols, plantation et suivi pour un résultat luxuriant et durable.</p>
-          <a href="#contact" class="service-card__link">En savoir plus →</a>
+          <p class="service-card__text">Sélection des meilleures espèces tropicales, préparation des sols et suivi pour un résultat luxuriant.</p>
+          <a href="services.html" class="service-card__link">En savoir plus →</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT / VALEURS ===== -->
-  <section class="values" id="apropos">
+  <!-- VALUES BANNER -->
+  <div class="values-banner">
     <div class="container">
-      <div class="values__inner">
-        <div class="values__image">
-          <div class="values__image-frame">
-            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80" alt="Jardin tropical Saint-Barthélemy" />
+      <div class="values-banner__grid">
+        <div class="values-banner__item fade-up">
+          <div class="values-banner__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
-          <div class="values__badge">
-            <span class="values__badge-num">15+</span>
-            <span class="values__badge-text">Années d'expérience</span>
+          <div>
+            <p class="values-banner__title">Savoir-faire local</p>
+            <p class="values-banner__text">Une équipe expérimentée, enracinée dans l'écosystème de Saint-Barth.</p>
           </div>
         </div>
-        <div class="values__content">
-          <p class="section-eyebrow">À Propos</p>
-          <h2 class="section-title">L'excellence au service<br>de votre jardin</h2>
-          <p class="values__desc">Les Jardiniers est une équipe de paysagistes passionnés, spécialisés dans la création et l'entretien de jardins d'exception à Saint-Barthélemy. Nous accompagnons une clientèle exigeante avec discrétion, professionnalisme et un sens aigu du détail.</p>
-
-          <div class="values__features">
-            <div class="value-item">
-              <div class="value-item__icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div>
-                <h4>Savoir-faire local</h4>
-                <p>Une équipe expérimentée, parfaitement adaptée au climat et à la végétation de Saint-Barth.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-item__icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div>
-                <h4>Service écologique</h4>
-                <p>Des produits respectueux de l'environnement, pour un jardin sain et une île préservée.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-item__icon">
-                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-              </div>
-              <div>
-                <h4>Disponibilité & réactivité</h4>
-                <p>Une équipe disponible et réactive pour répondre à toutes vos demandes avec célérité.</p>
-              </div>
-            </div>
-            <div class="value-item">
-              <div class="value-item__icon">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
-              </div>
-              <div>
-                <h4>Suivi personnalisé</h4>
-                <p>Des équipes dédiées, adaptées aux spécificités de chaque propriété et aux attentes de chaque client.</p>
-              </div>
-            </div>
+        <div class="values-banner__item fade-up">
+          <div class="values-banner__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <p class="values-banner__title">Qualité constante</p>
+            <p class="values-banner__text">Des prestations irréprochables à chaque intervention, sans exception.</p>
+          </div>
+        </div>
+        <div class="values-banner__item fade-up">
+          <div class="values-banner__icon">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div>
+            <p class="values-banner__title">Service personnalisé</p>
+            <p class="values-banner__text">Une équipe dédiée, adaptée aux spécificités de chaque propriété.</p>
+          </div>
+        </div>
+        <div class="values-banner__item fade-up">
+          <div class="values-banner__icon">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <p class="values-banner__title">Disponibilité & réactivité</p>
+            <p class="values-banner__text">Toujours joignables, nous répondons rapidement à vos demandes urgentes.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== RÉALISATIONS ===== -->
-  <section class="gallery" id="realisations">
+  <!-- ABOUT PREVIEW -->
+  <section class="about-preview">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Notre portfolio</p>
-        <h2 class="section-title">Nos Réalisations</h2>
-        <p class="section-desc">Découvrez quelques-uns de nos jardins créés et entretenus à Saint-Barthélemy.</p>
-      </div>
-
-      <div class="gallery__grid">
-        <div class="gallery__item gallery__item--wide">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Jardin villa luxe" />
-          <div class="gallery__item-overlay">
-            <span>Villa privée – Gustavia</span>
+      <div class="about-preview__inner">
+        <div class="about-preview__image fade-up">
+          <div class="about-preview__img-frame">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=700&q=80" alt="Jardinier professionnel Saint-Barthélemy" loading="lazy" />
+          </div>
+          <div class="about-preview__badge">
+            <span class="about-preview__badge-num">15+</span>
+            <span class="about-preview__badge-text">Années d'expertise</span>
           </div>
         </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=400&q=80" alt="Entretien jardin tropical" />
-          <div class="gallery__item-overlay">
-            <span>Entretien tropical – St-Jean</span>
+        <div class="fade-up">
+          <span class="section-eyebrow">Notre histoire</span>
+          <h2 class="section-title">Une passion transmise,<br>un savoir-faire unique</h2>
+          <p style="font-size:15px;color:var(--text-mid);line-height:1.8;margin-bottom:28px;">Fondés à Saint-Barthélemy, Les Jardiniers accompagnent depuis plus de 15 ans les propriétaires les plus exigeants de l'île. Notre équipe maîtrise la flore tropicale locale et crée des jardins qui respectent l'environnement insulaire tout en sublimant chaque propriété.</p>
+          <div class="about-preview__features">
+            <div class="about-feature">
+              <div class="about-feature__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <div><h4>Expertise locale</h4><p>Connaissance approfondie des espèces tropicales et du micro-climat de Saint-Barth.</p></div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+              <div><h4>Éco-responsable</h4><p>Produits naturels, respect de la biodiversité et pratiques durables à chaque intervention.</p></div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature__icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+              <div><h4>Ponctualité</h4><p>Des interventions planifiées, respectées et jamais interrompues.</p></div>
+            </div>
+            <div class="about-feature">
+              <div class="about-feature__icon"><svg viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/></svg></div>
+              <div><h4>Discrétion</h4><p>Un service haut de gamme dans le respect total de votre vie privée.</p></div>
+            </div>
           </div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=400&q=80" alt="Plantation paysagère" />
-          <div class="gallery__item-overlay">
-            <span>Plantation – Flamands</span>
-          </div>
-        </div>
-        <div class="gallery__item">
-          <img src="https://images.unsplash.com/photo-1597673030470-87f51b929d9a?w=400&q=80" alt="Aménagement piscine" />
-          <div class="gallery__item-overlay">
-            <span>Aménagement piscine – Lorient</span>
-          </div>
-        </div>
-        <div class="gallery__item gallery__item--tall">
-          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Vue panoramique jardin" />
-          <div class="gallery__item-overlay">
-            <span>Vue panoramique – Toiny</span>
-          </div>
+          <a href="a-propos.html" class="btn btn--outline-dark" style="margin-top:32px;">Découvrir notre histoire</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== TÉMOIGNAGES ===== -->
-  <section class="testimonials">
+  <!-- GALLERY PREVIEW -->
+  <section class="gallery-preview">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Ce que disent nos clients</p>
-        <h2 class="section-title">Témoignages</h2>
+        <span class="section-eyebrow">Portfolio</span>
+        <h2 class="section-title">Quelques réalisations</h2>
+        <p class="section-desc">Des jardins créés et entretenus avec passion à travers toute l'île.</p>
       </div>
-      <div class="testimonials__grid">
-        <div class="testimonial-card">
+      <div class="gallery-preview__grid">
+        <div class="gallery-item gallery-item--wide fade-up">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Villa jardin Saint-Barth" loading="lazy" />
+          <div class="gallery-item__overlay"><span>Villa – Gustavia</span></div>
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=500&q=80" alt="Jardin tropical" loading="lazy" />
+          <div class="gallery-item__overlay"><span>Entretien – Saint-Jean</span></div>
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?w=500&q=80" alt="Plantation paysagère" loading="lazy" />
+          <div class="gallery-item__overlay"><span>Plantation – Flamands</span></div>
+        </div>
+        <div class="gallery-item fade-up">
+          <img src="https://images.unsplash.com/photo-1597673030470-87f51b929d9a?w=500&q=80" alt="Aménagement piscine" loading="lazy" />
+          <div class="gallery-item__overlay"><span>Aménagement – Lorient</span></div>
+        </div>
+        <div class="gallery-item gallery-item--tall fade-up">
+          <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Jardin panoramique" loading="lazy" />
+          <div class="gallery-item__overlay"><span>Vue panoramique – Toiny</span></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="realisations.html" class="btn btn--outline-dark">Voir toutes nos réalisations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Ils nous font confiance</span>
+        <h2 class="section-title">Ce que disent nos clients</h2>
+      </div>
+      <div class="testimonials-preview__grid">
+        <div class="testimonial-card fade-up">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">"Une équipe exceptionnelle qui a transformé notre jardin en véritable havre de paix. Discrets, professionnels et d'une précision remarquable."</p>
+          <p class="testimonial-card__text">"Une équipe exceptionnelle qui a transformé notre propriété en véritable havre de paix tropical. Discrets, professionnels et d'une précision remarquable."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">C.T</div>
+            <div><strong>Caroline & Thibaut G.</strong><span>Villa – Gustavia</span></div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-card__stars">★★★★★</div>
+          <p class="testimonial-card__text">"Depuis trois ans qu'ils entretiennent notre villa, nous n'avons jamais eu à redire. Un service digne des plus belles adresses de l'île."</p>
           <div class="testimonial-card__author">
             <div class="testimonial-card__avatar">M.L</div>
-            <div>
-              <strong>Marie & Laurent D.</strong>
-              <span>Villa Gustavia</span>
-            </div>
+            <div><strong>Marc L.</strong><span>Résidence – Saint-Jean</span></div>
           </div>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card fade-up">
           <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">"Depuis trois ans qu'ils entretiennent notre propriété, nous ne sommes jamais déçus. Un service digne des plus belles adresses de l'île."</p>
+          <p class="testimonial-card__text">"La création de notre jardin tropical a dépassé toutes nos attentes. Leur connaissance des plantes locales et leur sens du détail sont incomparables."</p>
           <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">P.B</div>
-            <div>
-              <strong>Pierre B.</strong>
-              <span>Propriété Saint-Jean</span>
-            </div>
+            <div class="testimonial-card__avatar">S.G</div>
+            <div><strong>Sophie G.</strong><span>Propriété – Flamands</span></div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">"La création de notre jardin tropical a dépassé toutes nos attentes. Leur connaissance des plantes locales est incomparable."</p>
-          <div class="testimonial-card__author">
-            <div class="testimonial-card__avatar">S.M</div>
-            <div>
-              <strong>Sophie M.</strong>
-              <span>Résidence Flamands</span>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div style="text-align:center;margin-top:40px;">
+        <a href="avis-clients.html" class="btn btn--outline" style="border-color:rgba(255,255,255,.4);color:rgba(255,255,255,.8);">Voir tous les avis</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="contact" id="contact">
+  <!-- FOOTER CTA -->
+  <div class="footer-cta">
     <div class="container">
-      <div class="contact__inner">
-        <div class="contact__info">
-          <p class="section-eyebrow">Contactez-nous</p>
-          <h2 class="section-title">Demandez votre<br>devis gratuit</h2>
-          <p class="contact__desc">Nous serions ravis d'étudier votre projet et de vous proposer une solution adaptée à votre propriété et à vos attentes.</p>
-
-          <div class="contact__details">
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Téléphone</strong>
-                <span>+590 590 XX XX XX</span>
-              </div>
-            </div>
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              <div>
-                <strong>Email</strong>
-                <span>contact@lesjardiniers-saintbarth.com</span>
-              </div>
-            </div>
-            <div class="contact__detail">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
-              <div>
-                <strong>Adresse</strong>
-                <span>Saint-Barthélemy, 97133<br>Antilles Françaises</span>
-              </div>
-            </div>
-          </div>
+      <div class="footer-cta__inner">
+        <div>
+          <p class="footer-cta__label">Prêt à sublimer votre extérieur ?</p>
+          <h3 class="footer-cta__title">Confiez votre jardin à une équipe de passionnés</h3>
         </div>
-
-        <form class="contact__form" id="contactForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Prénom & Nom</label>
-              <input type="text" id="name" name="name" placeholder="Jean Dupont" required />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="jean@exemple.com" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="phone">Téléphone</label>
-            <input type="tel" id="phone" name="phone" placeholder="+590 690 XX XX XX" />
-          </div>
-          <div class="form-group">
-            <label for="service">Service souhaité</label>
-            <select id="service" name="service">
-              <option value="">Sélectionnez un service</option>
-              <option>Entretien régulier</option>
-              <option>Création paysagère</option>
-              <option>Taille & Élagage</option>
-              <option>Plantation & Aménagement</option>
-              <option>Autre</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Votre message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Décrivez votre projet ou votre besoin..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Envoyer ma demande</button>
-        </form>
+        <a href="contact.html" class="btn btn--primary">Demandez votre devis gratuit</a>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__inner">
+      <div class="footer__grid">
         <div class="footer__brand">
-          <a href="#" class="logo logo--light">
-            <span class="logo__pre">LES</span>
-            <span class="logo__name">JARDINIERS</span>
-            <span class="logo__sub">CRÉATION ET ENTRETIEN<br>DE JARDINS</span>
+          <a href="index.html" class="logo">
+            <div class="logo__circle">
+              <svg viewBox="0 0 52 52" fill="none"><circle cx="26" cy="26" r="26" fill="#3D6B40"/><circle cx="18" cy="15" r="4" fill="white" opacity="0.85"/><path d="M12 28 C12 21 24 21 24 28 L22 38 L14 38Z" fill="white" opacity="0.85"/><circle cx="32" cy="16" r="3.5" fill="white" opacity="0.75"/><path d="M27 28 C27 22 37 22 37 28 L35 38 L29 38Z" fill="white" opacity="0.7"/><path d="M25 35 C23 31 22 27 26 24 C30 27 29 31 27 35Z" fill="#7EC88A" opacity="0.75"/></svg>
+            </div>
+            <div class="logo__text">
+              <span class="logo__name" style="color:white;">LES JARDINIERS</span>
+              <span class="logo__sub">SAINT-BARTHÉLEMY</span>
+            </div>
           </a>
-          <p class="footer__tagline">L'art du jardin à Saint-Barthélemy</p>
-        </div>
-
-        <div class="footer__links">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#services">Nos Services</a></li>
-            <li><a href="#realisations">Réalisations</a></li>
-            <li><a href="#apropos">À Propos</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__links">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="#services">Entretien Régulier</a></li>
-            <li><a href="#services">Création Paysagère</a></li>
-            <li><a href="#services">Taille & Élagage</a></li>
-            <li><a href="#services">Plantation & Aménagement</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__contact">
-          <h4>Contact</h4>
-          <p>+590 590 XX XX XX</p>
-          <p>contact@lesjardiniers-saintbarth.com</p>
-          <p>Saint-Barthélemy, 97133</p>
+          <p class="footer__brand-desc">Spécialistes de la création et de l'entretien de jardins d'exception pour les plus belles propriétés de Saint-Barthélemy.</p>
           <div class="footer__social">
-            <a href="#" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-            </a>
-            <a href="#" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="1.5"/><path d="M17.5 6.5h.01" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a>
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           </div>
         </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Nos Services</a></li>
+            <li><a href="pour-qui.html">Pour qui</a></li>
+            <li><a href="realisations.html">Réalisations</a></li>
+            <li><a href="avis-clients.html">Avis clients</a></li>
+            <li><a href="a-propos.html">À Propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Informations</h4>
+          <ul>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 16z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <a href="tel:+590690000000">+590 690 XX XX XX</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" opacity="0.6"/></svg>
+              <a href="https://wa.me/590690000000">WhatsApp</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="1.5"/><path d="m22 6-10 7L2 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <a href="mailto:contact@lesjardiniers-saintbarth.com">contact@lesjardiniers-saintbarth.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/></svg>
+              Saint-Barthélemy, 97133
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Nos engagements</h4>
+          <ul>
+            <li>Qualité & savoir-faire</li>
+            <li>Respect de la nature</li>
+            <li>Passion du jardin</li>
+            <li>Discrétion & fiabilité</li>
+            <li>Réactivité garantie</li>
+          </ul>
+        </div>
       </div>
-
       <div class="footer__bottom">
-        <p>&copy; 2024 Les Jardiniers – Saint-Barthélemy. Tous droits réservés.</p>
+        <p>© 2024 Les Jardiniers – Saint-Barthélemy. Tous droits réservés.</p>
         <div class="footer__bottom-links">
           <a href="#">Mentions légales</a>
           <a href="#">Politique de confidentialité</a>
+          <a href="contact.html">Faire appel</a>
         </div>
       </div>
     </div>
   </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/590690000000" class="whatsapp-float" aria-label="Contactez-nous sur WhatsApp" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
