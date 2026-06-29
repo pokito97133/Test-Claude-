@@ -38,30 +38,31 @@ class EmailReader:
                 pass
             self._connection = None
 
-    def fetch_unread_invoice_emails(self) -> List[EmailMessage]:
-        """Récupère les emails non lus qui semblent contenir des factures."""
+    def fetch_all_unread(self) -> List[EmailMessage]:
+        """Récupère tous les emails non lus (factures entrantes + commandes propriétaire)."""
         if not self._connection:
             self.connect()
 
         self._connection.select(self.config.inbox_folder)
-
-        # Recherche emails non lus avec mots-clés facture
-        _, uids_facture = self._connection.search(None, '(UNSEEN SUBJECT "facture")')
-        _, uids_invoice = self._connection.search(None, '(UNSEEN SUBJECT "invoice")')
-
-        all_uids = set()
-        for uid_list in [uids_facture, uids_invoice]:
-            if uid_list[0]:
-                all_uids.update(uid_list[0].split())
+        _, uid_data = self._connection.search(None, "UNSEEN")
 
         messages = []
-        for uid in all_uids:
-            msg = self._fetch_message(uid)
-            if msg:
-                messages.append(msg)
+        if uid_data[0]:
+            for uid in uid_data[0].split():
+                msg = self._fetch_message(uid)
+                if msg:
+                    messages.append(msg)
 
-        logger.info(f"{len(messages)} email(s) de facture non lu(s) trouvé(s)")
+        logger.info(f"{len(messages)} email(s) non lu(s) trouvé(s)")
         return messages
+
+    def fetch_unread_invoice_emails(self) -> List[EmailMessage]:
+        """Récupère les emails non lus qui semblent contenir des factures (compat legacy)."""
+        all_msgs = self.fetch_all_unread()
+        return [
+            m for m in all_msgs
+            if "facture" in m.subject.lower() or "invoice" in m.subject.lower()
+        ]
 
     def _fetch_message(self, uid: bytes) -> Optional[EmailMessage]:
         _, data = self._connection.fetch(uid, "(RFC822)")

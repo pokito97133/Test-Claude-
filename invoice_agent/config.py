@@ -31,6 +31,9 @@ class AgentConfig:
     output_dir: str = os.getenv("OUTPUT_DIR", "./generated_invoices")
     invoice_prefix: str = os.getenv("INVOICE_PREFIX", "FACT")
     default_payment_days: int = int(os.getenv("PAYMENT_DAYS", "30"))
+    client_store_path: str = os.getenv("CLIENT_STORE", "./clients.json")
+    # Emails du propriétaire autorisés à envoyer des commandes
+    owner_emails: list = None
     email_config: EmailConfig = None
     company_config: CompanyConfig = None
 
@@ -39,3 +42,6 @@ class AgentConfig:
             self.email_config = EmailConfig()
         if self.company_config is None:
             self.company_config = CompanyConfig()
+        if self.owner_emails is None:
+            raw = os.getenv("OWNER_EMAILS", self.email_config.email_address)
+            self.owner_emails = [e.strip() for e in raw.split(",") if e.strip()]
