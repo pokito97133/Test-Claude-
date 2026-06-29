@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+generated_invoices/
+agent.log
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
